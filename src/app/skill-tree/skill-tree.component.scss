@@ -1,0 +1,88 @@
+.skill h2 {
+  margin-bottom: 25px;
+}
+
+.progress-wrap {
+  position: relative;
+}
+
+.progress .color1,
+.progress .color1 .bar-width {
+  background: #2d7da4;
+}
+
+.progress .color2,
+.progress .color2 .bar-width {
+  background: #6aa42f;
+}
+
+.progress .color3,
+.progress .color3 .bar-width {
+  background: #ffcc33;
+}
+
+.progress .color4,
+.progress .color4 .bar-width {
+  background: #db3615;
+}
+
+.progress,
+.progress-bar {
+  height: 15px;
+  line-height: 15px;
+  background: #e6e6e6;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+  overflow: visible;
+  text-align: right;
+}
+
+.progress {
+  position: relative;
+}
+
+.progress .bar-width {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  top: -30px;
+  border-radius: 2px;
+  margin-left: -30px;
+}
+
+.progress span {
+  position: relative;
+}
+
+.progress span:before {
+  content: ' ';
+  position: absolute;
+  width: auto;
+  height: auto;
+  border-width: 8px 5px;
+  border-style: solid;
+  bottom: -15px;
+  right: 8px;
+}
+
+.progress .color1 span:before {
+  border-color: #2d7da4 transparent transparent transparent;
+}
+
+.progress .color2 span:before {
+  border-color: #6aa42f transparent transparent transparent;
+}
+
+.progress .color3 span:before {
+  border-color: #ffcc33 transparent transparent transparent;
+}
+
+.progress .color4 span:before {
+  border-color: #db3615 transparent transparent transparent;
+}

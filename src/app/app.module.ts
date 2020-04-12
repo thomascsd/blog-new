@@ -7,13 +7,17 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { AboutComponent } from './about/about.component';
+import { SkillTreeComponent } from './skill-tree/skill-tree.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent,
+    SkillTreeComponent
   ],
   imports: [
     BrowserModule,
