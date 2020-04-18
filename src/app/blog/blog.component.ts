@@ -1,5 +1,6 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {ActivatedRoute, Router, ROUTES} from '@angular/router';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ActivatedRoute, Router, ROUTES } from '@angular/router';
+import { ScullyRoutesService } from '@scullyio/ng-lib';
 
 declare var ng: any;
 
@@ -8,12 +9,21 @@ declare var ng: any;
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.css'],
   preserveWhitespaces: true,
-  encapsulation: ViewEncapsulation.Emulated
-
+  encapsulation: ViewEncapsulation.Emulated,
 })
 export class BlogComponent implements OnInit {
-  ngOnInit() {}
+  title = '';
+  bgImageUrl = '';
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private scullyService: ScullyRoutesService
+  ) {}
 
-  constructor(private router: Router, private route: ActivatedRoute) {
+  ngOnInit() {
+    this.scullyService.getCurrent().subscribe((route) => {
+      this.title = route.title;
+      this.bgImageUrl = route.bgImageUrl;
+    });
   }
 }

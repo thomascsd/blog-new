@@ -1,13 +1,14 @@
 {
   "name": "blog-new",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",
-    "build": "ng build & npm run scully -- --nw",
+    "build": "ng build & npm run scully",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "scan": "npm run scully -- --scanRoutes",
     "scully": "scully",
     "scully:serve": "scully serve"
   },

@@ -4,18 +4,14 @@
       <div class="media">
         <img
           class="mr-3 img-fluid post-thumb d-none d-md-flex"
-          src="{{ link.bgImageUrl }}"
+          src="{{ getImageUrl(link.bgImageUrl) }}"
           alt="image"
         />
         <div class="media-body">
           <h3 class="title mb-1">
             <a [routerLink]="[link.route]">{{ link.title }}</a>
           </h3>
-          <div class="intro">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-            dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
-            nascetur ridiculus mus. Donec quam felis, ultricies...
-          </div>
+          <div class="intro"></div>
           <a class="more-link" [routerLink]="[link.route]">Read more &rarr;</a>
         </div>
         <!--//media-body-->

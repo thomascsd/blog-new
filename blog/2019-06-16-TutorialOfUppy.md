@@ -1,9 +1,10 @@
 ---
 title: Uppy - 最方便的上傳套件
-bgImageUrl: /images/11/11-0.jpg
+bgImageUrl: assets/images/11/11-0.jpg
+published: true
 ---
 
-一直以來，我都覺得上傳檔案的程式開發，是表單處理中的痛點，一般的&lt;input type="file" />的功能比較簡略，介面不甚美觀。之前有發現Uppy這個套件，就對它感興趣，現在已經出了1.0版，想寫篇文章記錄一下心得。
+一直以來，我都覺得上傳檔案的程式開發，是表單處理中的痛點，一般的&lt;input type="file" />的功能比較簡略，介面不甚美觀。之前有發現 Uppy 這個套件，就對它感興趣，現在已經出了 1.0 版，想寫篇文章記錄一下心得。
 
 這篇的文章的原始碼在這邊[ngx-uppy-demo](https://github.com/thomascsd/ngx-uppy-demo)
 
@@ -13,20 +14,19 @@ bgImageUrl: /images/11/11-0.jpg
 npm install uppy
 ```
 
-當執行npm install uppy時，是安裝Uppy的全部功能，這當然會使得安裝的檔案容量變大。
+當執行 npm install uppy 時，是安裝 Uppy 的全部功能，這當然會使得安裝的檔案容量變大。
 
 ```sh
 npm install @uppy/core @uppy/dashboard @uppy/xhr-upload
 ```
 
-一般的作法，就是安裝所需的套件，如果想要使用Dashboard，可以只安裝@uppy/dashboard及@uppy/xhr-upload。
+一般的作法，就是安裝所需的套件，如果想要使用 Dashboard，可以只安裝@uppy/dashboard 及@uppy/xhr-upload。
 
 ```sh
 npm install @uppy/file-input @uppy/progress-bar @uppy/xhr-upload
 ```
 
-如果只想要使用一般的FileUpload，可以只安裝@uppy/file-input @uppy/progress-bar @uppy/xhr-upload
-
+如果只想要使用一般的 FileUpload，可以只安裝@uppy/file-input @uppy/progress-bar @uppy/xhr-upload
 
 ## 實作
 
@@ -36,23 +36,22 @@ npm install @uppy/file-input @uppy/progress-bar @uppy/xhr-upload
 @Component({
   selector: 'app-uppy',
   templateUrl: './uppy.component.html',
-  styleUrls: ['./uppy.component.scss']
+  styleUrls: ['./uppy.component.scss'],
 })
 export class UppyComponent implements AfterViewInit {
   ngAfterViewInit(): void {
-      // Create Uppy object
+    // Create Uppy object
   }
 }
 ```
 
-因為擅長的是Angular，所以這個範例，想將Angular和Uppy整合，所以首先實作AfterViewInit，確認頁面的DOM都戴入完成後，才能建立Uppy的物件。
-
+因為擅長的是 Angular，所以這個範例，想將 Angular 和 Uppy 整合，所以首先實作 AfterViewInit，確認頁面的 DOM 都戴入完成後，才能建立 Uppy 的物件。
 
 ### Dashboard
 
 ```html
 <div class="container">
-<div class="uploadContainer"></div>
+  <div class="uploadContainer"></div>
 </div>
 ```
 
@@ -80,18 +79,19 @@ uppy.on('upload-success', (file, response: any) => {
 });
 ```
 
-使用use戴入所需的套件，這裡戴入Dashboard及XHRUpload。
+使用 use 戴入所需的套件，這裡戴入 Dashboard 及 XHRUpload。
 
 ```javascript
 uppy.use(Dashboard, {
-    inline: true,
-    target: '.uploadContainer'
+  inline: true,
+  target: '.uploadContainer',
 });
 ```
 
-Dashboard的參數可以參考[官方文件](https://uppy.io/docs/dashboard/)。
-* inline(true)：直接將Dashoboard顯示在頁面上。
-* target('.uploadContainer')：Dashboard顯示在uploadContainer上。
+Dashboard 的參數可以參考[官方文件](https://uppy.io/docs/dashboard/)。
+
+- inline(true)：直接將 Dashoboard 顯示在頁面上。
+- target('.uploadContainer')：Dashboard 顯示在 uploadContainer 上。
 
 ```javascript
 uppy.use(XHRUpload, {
@@ -105,11 +105,11 @@ uppy.on('upload-success', (file, response: any) => {
 });
 ```
 
-XHRUpload的參數可以參考[文件](https://uppy.io/docs/xhr-upload/)，``endpoint``指定Server端的API位置，並且是用監聽事件upload-success來判斷是否上傳成功。如此檔案或是圖片上傳的功能就完成。
+XHRUpload 的參數可以參考[文件](https://uppy.io/docs/xhr-upload/)，`endpoint`指定 Server 端的 API 位置，並且是用監聽事件 upload-success 來判斷是否上傳成功。如此檔案或是圖片上傳的功能就完成。
 
-<img class="img-responsive" src="/images/11/11-1.png">
+<img class="img-responsive" src="assets/images/11/11-1.png">
 
-Dashboard的畫面如上，因為Uppy是上傳套件，無法戴入圖片，所以這邊有使用另一個套件[ngx-gallery](https://github.com/MurhafSousli/ngx-gallery)。
+Dashboard 的畫面如上，因為 Uppy 是上傳套件，無法戴入圖片，所以這邊有使用另一個套件[ngx-gallery](https://github.com/MurhafSousli/ngx-gallery)。
 
 ### File Input
 
@@ -138,13 +138,14 @@ uppy.on('upload-success', (file, response: any) => {
 });
 ```
 
-程式碼與Dashboard的很相似，戴入FileInput的套件及設定參數，可以參考[文件](https://uppy.io/docs/file-input/)。
-* target('.uploadContainer')：FileInput顯示在uploadContainer上。
-* inputName('fileData')：傳送至Server的名稱為fileData。
+程式碼與 Dashboard 的很相似，戴入 FileInput 的套件及設定參數，可以參考[文件](https://uppy.io/docs/file-input/)。
 
-<img class="img-responsive" src="/images/11/11-2.png">
+- target('.uploadContainer')：FileInput 顯示在 uploadContainer 上。
+- inputName('fileData')：傳送至 Server 的名稱為 fileData。
 
-FileInput的畫面如上。
+<img class="img-responsive" src="assets/images/11/11-2.png">
+
+FileInput 的畫面如上。
 
 ### Server
 
@@ -153,7 +154,7 @@ import * as fileUpload from 'express-fileupload';
 app.use(fileUpload());
 ```
 
-Server端是使用express.js，而處理上傳檔案是用[express-fileupload](https://github.com/richardgirges/express-fileupload)這個套件。
+Server 端是使用 express.js，而處理上傳檔案是用[express-fileupload](https://github.com/richardgirges/express-fileupload)這個套件。
 
 ```javascript
 async handler(req: express.Request, res: express.Response) {
@@ -165,10 +166,8 @@ async handler(req: express.Request, res: express.Response) {
   }
 ```
 
-只需用req.files.fileData就可以存取到所上傳的物件，而fileData就是在**XHRUpload**套件上所設定fieldName的值。
-
+只需用 req.files.fileData 就可以存取到所上傳的物件，而 fileData 就是在**XHRUpload**套件上所設定 fieldName 的值。
 
 ## 結綸
 
-Uppy是目前我覺得很方便的上傳套件，簡單幾段程式就可以實作檔案上傳。
-
+Uppy 是目前我覺得很方便的上傳套件，簡單幾段程式就可以實作檔案上傳。
