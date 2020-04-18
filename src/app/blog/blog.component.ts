@@ -14,6 +14,7 @@ declare var ng: any;
 export class BlogComponent implements OnInit {
   title = '';
   bgImageUrl = '';
+  publishedDate = '';
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -22,8 +23,10 @@ export class BlogComponent implements OnInit {
 
   ngOnInit() {
     this.scullyService.getCurrent().subscribe((route) => {
+      const dateRex = /(\d{4}-\d{2}-\d{2})/g;
       this.title = route.title;
-      this.bgImageUrl = route.bgImageUrl;
+      this.bgImageUrl = route.bgImageUrl || 'assets/images/bg1920x872.jpg';
+      this.publishedDate = dateRex.exec(route.route)[0];
     });
   }
 }

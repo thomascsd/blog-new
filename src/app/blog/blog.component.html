@@ -3,8 +3,7 @@
     <header class="blog-post-header">
       <h2 class="title mb-2">{{ title }}</h2>
       <div class="meta mb-3">
-        <span class="date">Published 3 months ago</span><span class="time">5 min read</span
-        ><span class="comment"><a href="#">4 comments</a></span>
+        <span class="date">{{ publishedDate }}</span>
       </div>
     </header>
 
@@ -13,9 +12,7 @@
         <img class="img-fluid" src="{{ bgImageUrl }}" alt="image" />
         <figcaption class="mt-2 text-center image-caption">
           Image Credit:
-          <a href="https://made4dev.com?ref=devblog" target="_blank">
-            made4dev.com (Premium Programming T-shirts)</a
-          >
+          <a href="https://unsplash.com/" target="_blank">unsplash</a>
         </figcaption>
       </figure>
       <scully-content></scully-content>
