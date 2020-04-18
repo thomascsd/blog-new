@@ -15,7 +15,16 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.links$ = this.scullyService.available$.pipe(
-      map((routes) => routes.filter((route) => !!route.title))
+      map((routes) => {
+        return routes
+          .filter((route) => !!route.title)
+          .sort((a, b) => {
+            const dateRex = /(\d{4}-\d{2}-\d{2})/g;
+            const dateA = dateRex.exec(a.route)[0];
+            const dateB = dateRex.exec(b.route)[0];
+            return dateA > dateB ? -1 : 1;
+          });
+      })
     );
   }
 

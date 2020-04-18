@@ -18,7 +18,7 @@ vue init nuxt-community/nuxtent-template my-site
 
 ## 網站架構
 
-<img class="img-responsive" src="assets/images/05/05-1.png">
+<img class="img-fluid" src="assets/images/05/05-1.png">
 
 ### page
 
@@ -178,15 +178,15 @@ export default {
 
 要注意的點是，第一次會顯示**Error:Comments Not Initialized**。
 
-<img class="img-responsive" src="assets/images/05/05-5.png">
+<img class="img-fluid" src="assets/images/05/05-5.png">
 
 需要登入自己的 Github 帳號後，啟動應用程式。
 
-<img class="img-responsive" src="assets/images/05/05-6.png">
+<img class="img-fluid" src="assets/images/05/05-6.png">
 
 成功之後，就會變成下圖
 
-<img class="img-responsive" src="assets/images/05/05-7.png">
+<img class="img-fluid" src="assets/images/05/05-7.png">
 
 ## 部署
 
@@ -194,7 +194,7 @@ export default {
 
 當使用 npm generate 時，卻會出現下列錯誤
 
-<img class="img-responsive" src="assets/images/05/05-2.png">
+<img class="img-fluid" src="assets/images/05/05-2.png">
 
 最後發現，使用下列步驟就 OK 了
 
@@ -202,11 +202,11 @@ export default {
 - baseUrl 設定成預設的 localhost:3200，並執行 npm generate
 - 再使用 VSCode 搜索 localhost:3200，即會發現 dist/api.js 內容有 baseURL:localhost:3200，然後將網址替換成正式環境，如我的 Blog 網址 thomascsd.github.io
 
-<img class="img-responsive" src="assets/images/05/05-3.png">
+<img class="img-fluid" src="assets/images/05/05-3.png">
 
 - 最後就可以部署至 GitHub page
 
-<img class="img-responsive" src="assets/images/05/05-4.png">
+<img class="img-fluid" src="assets/images/05/05-4.png">
 
 ## 結論
 

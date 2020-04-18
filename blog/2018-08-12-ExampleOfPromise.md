@@ -11,7 +11,7 @@ published: true
  
 但是這樣會造成維護及讀code都不易，容易產生俗稱callback hell的問題，每次都想到下面這張圖。
 
-<img class="img-responsive" src="assets/images/06/06-1.png">
+<img class="img-fluid" src="assets/images/06/06-1.png">
 
 所以有人想到 Promise 的解決方式
 
