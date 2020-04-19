@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ScullyRoutesService, ScullyRoute } from '@scullyio/ng-lib';
-import { Observable } from 'rxjs';
+import { Observable, zip } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Component({
@@ -10,22 +11,44 @@ import { map } from 'rxjs/operators';
 })
 export class HomeComponent implements OnInit {
   links$: Observable<ScullyRoute[]>;
+  page: number;
 
-  constructor(private scullyService: ScullyRoutesService) {}
+  constructor(
+    private scullyService: ScullyRoutesService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    this.links$ = this.scullyService.available$.pipe(
-      map((routes) => {
+    this.loadData();
+  }
+
+  private loadData() {
+    const pageSize = 10;
+
+    this.links$ = zip(this.scullyService.available$, this.route.params).pipe(
+      map(([routes, params]) => {
+        this.page = parseInt(params.page, 10);
         return routes
           .filter((route) => !!route.title)
-          .sort((a, b) => {
-            const dateRex = /(\d{4}-\d{2}-\d{2})/g;
-            const dateA = dateRex.exec(a.route)[0];
-            const dateB = dateRex.exec(b.route)[0];
-            return dateA > dateB ? -1 : 1;
-          });
+          .reverse()
+          .slice((this.page - 1) * pageSize, this.page * pageSize);
       })
     );
+  }
+
+  previous() {
+    let pageNum = this.page - 1;
+
+    if (pageNum === 0) {
+      pageNum = 1;
+    }
+
+    this.router.navigate(['home', pageNum]);
+  }
+
+  next() {
+    this.router.navigate(['home', this.page + 1]);
   }
 
   getImageUrl(imageUrl: string) {
