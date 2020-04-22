@@ -12,6 +12,7 @@ import { map } from 'rxjs/operators';
 export class HomeComponent implements OnInit {
   links$: Observable<ScullyRoute[]>;
   page: number;
+  itemCount: number;
 
   constructor(
     private scullyService: ScullyRoutesService,
@@ -29,10 +30,15 @@ export class HomeComponent implements OnInit {
     this.links$ = zip(this.scullyService.available$, this.route.params).pipe(
       map(([routes, params]) => {
         this.page = parseInt(params.page, 10);
-        return routes
+
+        const items = routes
           .filter((route) => !!route.title)
           .reverse()
           .slice((this.page - 1) * pageSize, this.page * pageSize);
+
+        this.itemCount = items.length;
+
+        return items;
       })
     );
   }
@@ -45,10 +51,12 @@ export class HomeComponent implements OnInit {
     }
 
     this.router.navigate(['home', pageNum]);
+    this.loadData();
   }
 
   next() {
     this.router.navigate(['home', this.page + 1]);
+    this.loadData();
   }
 
   getImageUrl(imageUrl: string) {

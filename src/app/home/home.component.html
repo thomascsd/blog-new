@@ -28,7 +28,11 @@
         (click)="previous()"
         >Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i
       ></a>
-      <a class="nav-link-next nav-item nav-link rounded" href="javascript:void(0)" (click)="next()"
+      <a
+        class="nav-link-next nav-item nav-link rounded"
+        href="javascript:void(0)"
+        (click)="next()"
+        [ngClass]="{ 'd-none': itemCount !== 10 }"
         >Next<i class="arrow-next fas fa-long-arrow-alt-right"></i
       ></a>
     </nav>
