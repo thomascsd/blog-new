@@ -58,8 +58,4 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['home', this.page + 1]);
     this.loadData();
   }
-
-  getImageUrl(imageUrl: string) {
-    return imageUrl || 'assets/images/bg1920x872.jpg';
-  }
 }

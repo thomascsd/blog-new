@@ -1,40 +1,37 @@
-<section class="blog-list px-3 py-5 p-md-5">
-  <div class="container">
-    <div class="item mb-5" *ngFor="let link of links$ | async">
-      <div class="media">
-        <img
-          class="mr-3 img-fluid post-thumb d-none d-md-flex"
-          src="{{ getImageUrl(link.bgImageUrl) }}"
-          alt="image"
-        />
-        <div class="media-body">
-          <h3 class="title mb-1">
-            <a [routerLink]="[link.route]">{{ link.title }}</a>
-          </h3>
-          <div class="intro"></div>
-          <a class="more-link" [routerLink]="[link.route]">Read more &rarr;</a>
-        </div>
-        <!--//media-body-->
-      </div>
-      <!--//media-->
-    </div>
-    <!--//item-->-
+<div>
+  <!-- Page Header -->
+  <app-header></app-header>
 
-    <nav class="blog-nav nav nav-justified my-5">
-      <a
-        class="nav-link-prev nav-item nav-link rounded-left"
-        href="javascript:void(0)"
-        [ngClass]="{ 'd-none': page === 1 }"
-        (click)="previous()"
-        >Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i
-      ></a>
-      <a
-        class="nav-link-next nav-item nav-link rounded"
-        href="javascript:void(0)"
-        (click)="next()"
-        [ngClass]="{ 'd-none': itemCount !== 10 }"
-        >Next<i class="arrow-next fas fa-long-arrow-alt-right"></i
-      ></a>
-    </nav>
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div *ngFor="let link of links$ | async">
+          <div class="post-preview">
+            <a [routerLink]="[link.route]">
+              <h2 class="post-title">
+                {{ link.title }}
+              </h2>
+            </a>
+            <p class="post-meta">on {{ post.date }}</p>
+          </div>
+          <hr />
+        </div>
+
+        <!-- Pager-->
+        <ul class="pager">
+          <li class="next">
+            <a href="javascript:void(0)" (click)="previous()" [ngClass]="{ 'd-none': page === 1 }"
+              >Previous &rarr;</a
+            >
+          </li>
+          <li class="next">
+            <a href="javascript:void(0)" (click)="next()" [ngClass]="{ 'd-none': itemCount !== 10 }"
+              >Next &rarr;</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
-</section>
+</div>
