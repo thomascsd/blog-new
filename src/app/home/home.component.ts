@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ScullyRoutesService, ScullyRoute } from '@scullyio/ng-lib';
 import { Observable, zip } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { BlogService } from '../core/blog.service';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +18,8 @@ export class HomeComponent implements OnInit {
   constructor(
     private scullyService: ScullyRoutesService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private blogService: BlogService
   ) {}
 
   ngOnInit(): void {
@@ -35,6 +37,8 @@ export class HomeComponent implements OnInit {
           .filter((route) => !!route.title)
           .reverse()
           .slice((this.page - 1) * pageSize, this.page * pageSize);
+
+        items.forEach((route) => (route.date = this.blogService.getPostDateFormRoute(route.route)));
 
         this.itemCount = items.length;
 
