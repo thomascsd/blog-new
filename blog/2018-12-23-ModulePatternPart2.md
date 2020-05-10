@@ -69,7 +69,7 @@ let module = await import('./my-module.js');
 
 ### 瀏覽器的支援
 
-<img class="img-fluid" src="assets/images/09/09-1.png">
+<img class="img-responsive" src="assets/images/09/09-1.png">
 
 根據 caniuse 的結果，現在全部的瀏覽器都有支援 ES2015 Module，可以不用使用 Webpack、Parcel 之類的 Module loader，直接使用原生語法就好了，但實務上還是需要 Webpack 之類的工具，幫忙將 js 打包、壓縮。
 

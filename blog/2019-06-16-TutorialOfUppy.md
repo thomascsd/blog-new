@@ -107,7 +107,7 @@ uppy.on('upload-success', (file, response: any) => {
 
 XHRUpload 的參數可以參考[文件](https://uppy.io/docs/xhr-upload/)，`endpoint`指定 Server 端的 API 位置，並且是用監聽事件 upload-success 來判斷是否上傳成功。如此檔案或是圖片上傳的功能就完成。
 
-<img class="img-fluid" src="assets/images/11/11-1.png">
+<img class="img-responsive" src="assets/images/11/11-1.png">
 
 Dashboard 的畫面如上，因為 Uppy 是上傳套件，無法戴入圖片，所以這邊有使用另一個套件[ngx-gallery](https://github.com/MurhafSousli/ngx-gallery)。
 
@@ -143,7 +143,7 @@ uppy.on('upload-success', (file, response: any) => {
 - target('.uploadContainer')：FileInput 顯示在 uploadContainer 上。
 - inputName('fileData')：傳送至 Server 的名稱為 fileData。
 
-<img class="img-fluid" src="assets/images/11/11-2.png">
+<img class="img-responsive" src="assets/images/11/11-2.png">
 
 FileInput 的畫面如上。
 

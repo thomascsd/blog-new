@@ -8,13 +8,13 @@ published: true
 但是 Jekyll 需要在本機安裝 Ruby 環境，這樣還是有點麻煩，還要先設定環境，之後我找到一個很方便的工具[Jekyll-now](https://github.com/barryclark/jekyll-now)，只要 Fork 就可以建立一個網站。
 
 - 1.到[Jekyll-now](https://github.com/barryclark/jekyll-now)，按下 Fork。
-  <img class="img-fluid" src="assets/images/01/jekyll-now1.png" alt="jekyll-now1">
+  <img class="img-responsive" src="assets/images/01/jekyll-now1.png" alt="jekyll-now1">
 
 - 2.設定 Respository 的名稱，需要設定成自已的使用者名稱。
-  <img class="img-fluid" src="assets/images/01/jekyll-now2.png" alt="jekyll-now1">
+  <img class="img-responsive" src="assets/images/01/jekyll-now2.png" alt="jekyll-now1">
 
 - 3.設定\_config.yml 後就可以完成一個基本的 Blog 了。
-  <img class="img-fluid" src="assets/images/01/jekyll-now3.png" alt="jekyll-now3">
+  <img class="img-responsive" src="assets/images/01/jekyll-now3.png" alt="jekyll-now3">
 
 ## 為自已的 Blog 自定樣式
 

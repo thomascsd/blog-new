@@ -1,5 +1,5 @@
-// const { setPluginConfig } = require('@scullyio/scully');
-// setPluginConfig('md', { enableSyntaxHighlighting: true });
+const { setPluginConfig } = require('@scullyio/scully');
+setPluginConfig('md', { enableSyntaxHighlighting: true });
 
 exports.config = {
   projectRoot: './src',

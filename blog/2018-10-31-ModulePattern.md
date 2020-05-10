@@ -115,7 +115,7 @@ namespace NS {
 
 TypeScript 本身就有命名空間的關鍵字，與 Module pattern 的寫法很相似，差別在於最後是用 export 的方式，傳出所要公開的 function。
 
-<img class="img-fluid" src="assets/images/08/08-1.png">
+<img class="img-responsive" src="assets/images/08/08-1.png">
 
 並且我們發現，上面這段 TypeScript 轉成的 JavaScript（如上圖所示），與上節的 Module + Namespace 的程式碼很相似，也是先宣告全堿變數 NS，接著判斷 NS 是否已存在，之後將定義的模組設為 NS 的屬性。
 
