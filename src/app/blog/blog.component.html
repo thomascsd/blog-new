@@ -1,6 +1,7 @@
 <div>
   <!-- Page Header -->
   <app-post-header
+    *ngIf="post"
     [title]="post.title"
     [postDate]="post.date"
     [bgImageUrl]="post.bgImageUrl"
