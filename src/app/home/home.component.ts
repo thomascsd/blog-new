@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ScullyRoutesService, ScullyRoute } from '@scullyio/ng-lib';
 import { Observable, zip } from 'rxjs';
@@ -29,9 +29,9 @@ export class HomeComponent implements OnInit {
   private loadData() {
     const pageSize = 10;
 
-    this.links$ = zip(this.scullyService.available$, this.route.params).pipe(
+    this.links$ = zip(this.scullyService.available$, this.route.queryParams).pipe(
       map(([routes, params]) => {
-        this.page = parseInt(params.page, 10);
+        this.page = parseInt(params.page || 1, 10);
 
         const items = routes
           .filter((route) => !!route.title)
@@ -47,6 +47,11 @@ export class HomeComponent implements OnInit {
     );
   }
 
+  @HostListener('window:popstate', ['$event'])
+  onPopState(event) {
+    this.loadData();
+  }
+
   previous() {
     let pageNum = this.page - 1;
 
@@ -59,7 +64,8 @@ export class HomeComponent implements OnInit {
   }
 
   next() {
-    this.router.navigate(['home', this.page + 1]);
+    this.page += 1;
+    this.router.navigate(['home'], { queryParams: { page: this.page }, replaceUrl: true });
     this.loadData();
   }
 }
