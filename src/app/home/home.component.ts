@@ -1,8 +1,8 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { ScullyRoutesService, ScullyRoute } from '@scullyio/ng-lib';
 import { Observable, zip } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, filter } from 'rxjs/operators';
 import { BlogService } from '../core/blog.service';
 
 @Component({
@@ -13,17 +13,21 @@ import { BlogService } from '../core/blog.service';
 export class HomeComponent implements OnInit {
   links$: Observable<ScullyRoute[]>;
   page: number;
-  itemCount: number;
+  itemCount = 0;
 
   constructor(
     private scullyService: ScullyRoutesService,
     private route: ActivatedRoute,
     private router: Router,
     private blogService: BlogService
-  ) {}
+  ) {
+    this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => {
+      this.loadData();
+    });
+  }
 
   ngOnInit(): void {
-    this.loadData();
+    // this.loadData();
   }
 
   private loadData() {
@@ -49,7 +53,7 @@ export class HomeComponent implements OnInit {
 
   @HostListener('window:popstate', ['$event'])
   onPopState(event) {
-    this.loadData();
+    // this.loadData();
   }
 
   previous() {
@@ -59,13 +63,12 @@ export class HomeComponent implements OnInit {
       pageNum = 1;
     }
 
-    this.router.navigate(['home', pageNum]);
-    this.loadData();
+    this.router.navigate(['/'], { queryParams: { page: pageNum }, replaceUrl: true });
+    // this.loadData();
   }
 
   next() {
-    this.page += 1;
-    this.router.navigate(['home'], { queryParams: { page: this.page }, replaceUrl: true });
-    this.loadData();
+    this.router.navigate(['/'], { queryParams: { page: this.page + 1 }, replaceUrl: true });
+    // this.loadData();
   }
 }
