@@ -1,7 +1,8 @@
-const { setPluginConfig } = require('@scullyio/scully');
+import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
+
 setPluginConfig('md', { enableSyntaxHighlighting: true });
 
-exports.config = {
+export const config: ScullyConfig = {
   projectRoot: './src',
   projectName: 'blog-new',
   outDir: './dist/static',
