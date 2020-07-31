@@ -1,7 +1,7 @@
 import { Component , OnInit} from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { distinctUntilChanged } from 'rxjs/operators';
-declare let gtag: Function;
+declare let gtag: any;
 
 @Component({
   selector: 'app-root',

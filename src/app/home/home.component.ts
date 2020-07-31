@@ -51,11 +51,6 @@ export class HomeComponent implements OnInit {
     );
   }
 
-  @HostListener('window:popstate', ['$event'])
-  onPopState(event) {
-    // this.loadData();
-  }
-
   previous() {
     let pageNum = this.page - 1;
 
