@@ -1,5 +1,5 @@
 ---
-title: 6個推薦的Angular Library
+title: 使用Scully建立Blog的心得記錄
 bgImageUrl: assets/images/15/15-0.jpg
 published: true
 ---
@@ -119,12 +119,12 @@ export class BlogComponent implements OnInit {
 
     this.links$ = zip(this.scullyService.available$, this.route.queryParams).pipe(
       map(([routes, params]) => {
-        this.page = parseInt(params.page || 1, 10);
+        this.page = parseInt(params.page || 1, 10); // 取得QueryString的頁數
 
         const items = routes
           .filter((route) => !!route.title)
           .reverse()
-          .slice((this.page - 1) * pageSize, this.page * pageSize);
+          .slice((this.page - 1) * pageSize, this.page * pageSize); // 使用slice來切割Arrary
 
         items.forEach((route) => (route.date = this.blogService.getPostDateFormRoute(route.route)));
 
@@ -133,6 +133,20 @@ export class BlogComponent implements OnInit {
         return items;
       })
     );
+  }
+
+  previous() {
+    let pageNum = this.page - 1;
+
+    if (pageNum === 0) {
+      pageNum = 1;
+    }
+
+    this.router.navigate(['/'], { queryParams: { page: pageNum }, replaceUrl: true });
+  }
+
+  next() {
+    this.router.navigate(['/'], { queryParams: { page: this.page + 1 }, replaceUrl: true });
   }
 ```
 
@@ -146,17 +160,17 @@ export class BlogComponent implements OnInit {
 
 完整的指令可以參考[文件](https://scully.io/docs/scully-cmd-line/)，我這邊列出幾個常用的。
 
-*scanRoutes：``npx scully --scan``，當新增路由時，例如：新增一篇文章，需要執行這個指令，來找到新的路由。
+* scanRoutes：``npx scully --scan``，當新增路由時，例如：新增一篇文章，需要執行這個指令，來找到新的路由。
 
-*watch：``npx scully --watch``，啟用watch模式，在開發階段很有幫助，可以立即看到修改的成果。
+* watch：``npx scully --watch``，啟用watch模式，在開發階段很有幫助，可以立即看到修改的成果。
 
 <img class="img-responsive" src="assets/images/16/16-9.png">
 
-*serve：``npx scully serve``，啟用Scully Server，與``ng serve``相似，但不同點在於不會build專案。
+* serve：``npx scully serve``，啟用Scully Server，與``ng serve``相似，但不同點在於不會build專案。
 
-*scully: ``scully``，如果不加上任何參數的話，Scully根據路由就會產生靜態檔案，並將靜態檔案預設放在``dist/static``下，所以很適合與``ng build --prod``一併使用。
+* scully: ``scully``，如果不加上任何參數的話，Scully根據路由就會產生靜態檔案，並將靜態檔案預設放在``dist/static``下，所以很適合與``ng build --prod``一併使用。
 
-``
+```
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",
@@ -170,10 +184,12 @@ export class BlogComponent implements OnInit {
     "scully:watch": "npx scully --watch",
     "scully:serve": "npx scully serve"
   },
-``
+```
 
 並且為了方便，我將這些常用的指令放在npm scripts中。
 
 ## 結論
 
 靠著cli的幫助，可以很快地建立Blog樣板，但我覺得這個只是開始，有些功能都還需求調整。而Scully目前在1.0Beta版，應該很快就到1.0正式版，加上之後Plugins愈來愈多的話，以後可以值得期待。
+
+原始碼：[https://github.com/thomascsd/blog-new](https://github.com/thomascsd/blog-new)

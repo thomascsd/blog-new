@@ -59,11 +59,9 @@ export class HomeComponent implements OnInit {
     }
 
     this.router.navigate(['/'], { queryParams: { page: pageNum }, replaceUrl: true });
-    // this.loadData();
   }
 
   next() {
     this.router.navigate(['/'], { queryParams: { page: this.page + 1 }, replaceUrl: true });
-    // this.loadData();
   }
 }
