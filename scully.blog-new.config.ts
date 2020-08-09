@@ -1,9 +1,10 @@
 import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
 import { getSitemapPlugin } from '@gammastream/scully-plugin-sitemap';
+// import '@notiz/scully-plugin-rss';
 
 setPluginConfig('md', { enableSyntaxHighlighting: true });
-// const SitemapPlugin = getSitemapPlugin();
-/*setPluginConfig(SitemapPlugin, {
+const SitemapPlugin = getSitemapPlugin();
+setPluginConfig(SitemapPlugin, {
   urlPrefix: 'https://thomascsd.github.io/',
   sitemapFilename: 'sitemap.xml',
   merge: false,
@@ -14,11 +15,11 @@ setPluginConfig('md', { enableSyntaxHighlighting: true });
     '/blog/:slug': {
       changeFreq: 'daily',
       priority: '0.9',
-      sitemapFilename: 'sitemap-blogs.xml',
+      sitemapFilename: 'sitemap.xml',
       merge: true,
     },
   },
-});*/
+});
 
 export const config: ScullyConfig = {
   projectRoot: './src',
@@ -30,6 +31,7 @@ export const config: ScullyConfig = {
       slug: {
         folder: './blog',
       },
+      //  postRenderers: ['rss']
     },
   },
 };
