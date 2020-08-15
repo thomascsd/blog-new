@@ -1,0 +1,16 @@
+{
+  "title": "Your Title",
+  "description": "Page description",
+  "id": "https://thomascsd.github.io/",
+  "link": "https://thomascsd.github.io/",
+  "language": "zh-TW",
+  "favicon": "https://thomascsd.github.io/favicon.ico",
+  "copyright": "2020 thomascsd",
+  "generator": "Page description",
+  "feedLinks": {
+    "json": "https://thomascsd.github.io/feed.json",
+    "atom": "https://thomascsd.github.io/feed.atom"
+  },
+  "outDir": "./dist/static",
+  "categories": ["JavaScript", "Angular", "TypeScript"]
+}
