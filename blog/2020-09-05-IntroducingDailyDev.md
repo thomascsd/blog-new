@@ -10,7 +10,7 @@ published: true
 
 <img class="img-responsive" src="assets/images/17/16-01.png">
 
-首先至[Daily.dev](https://daily.dev/)下戴瀏覽器的擴充套件，支援 FireFox 及 Chrome。
+首先至[daily.dev](https://daily.dev/)下戴瀏覽器的擴充套件，支援 FireFox 及 Chrome。
 
 ## 套件的功能
 
