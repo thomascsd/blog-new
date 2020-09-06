@@ -4,6 +4,8 @@ bgImageUrl: assets/images/12/12-0.jpg
 published: true
 ---
 
+[2020/08/29 更新：加上 package.json 的設定]
+
 前一陣子，開發了產生 README.md 的 VSCode - [Readme Pattern](https://marketplace.visualstudio.com/items?itemName=thomascsd.vscode-readme-pattern)，如何大家還沒安裝的話，可以試試看。在開發中，有遇到一些問題，以及累積了一些心得，分享給的大家。
 
 ## 初始
@@ -19,6 +21,31 @@ npm install -g yo generator-code
 <img class="img-responsive" src="assets/images/12/12-1.png">
 
 <img class="img-responsive" src="assets/images/12/12-2.png">
+
+## package.json 的設定
+
+```
+{
+   "activationEvents": [
+     "onCommand:extension.readme",
+     "onCommand:extension.readmeOnExplorer"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.readme",
+        "title": "readme: Generates README.md"
+      },
+      {
+        "command": "extension.readmeOnExplorer",
+        "title": "readme: Generates README.md on here"
+      }
+    ],
+  },
+}
+```
+
+需要在`activationEvents`及`contributes.commands`這 2 個地方都需加上需執行的 command，有多少的 command 就加上多少，不然 command 不會有作用。
 
 ## 建立
 
