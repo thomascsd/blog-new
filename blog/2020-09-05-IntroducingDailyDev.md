@@ -4,7 +4,7 @@ bgImageUrl: assets/images/17/17-0.jpg
 published: true
 ---
 
-這一次不討論技術，我常常早上都會看一些技術文章，大部份是從 Eco.js 或者 Medium，但是發現文章散落在各個網站，就想有沒有服務會整合各個網站的文章，之前在 GitHub 的 treading 發現一個服務－[daily.dev](https://daily.dev/)剛好滿足我的需求，並且也是瀏覽器套件，Chrome 及 FireFox 都可以安裝，會將文章顯示在新分頁中，分享給大家參考看看。
+這一次不討論技術，我常常早上都會看一些技術文章，大部份是從 [echojs](https://www.echojs.com/) 或者 [Medium](https://medium.com/)，但是發現文章散落在各個網站，就想有沒有服務會整合各個網站的文章，之前在 GitHub 的 treading 發現一個服務－[daily.dev](https://daily.dev/)剛好滿足我的需求，並且也是瀏覽器套件，Chrome 及 FireFox 都可以安裝，會將文章顯示在新分頁中，分享給大家參考看看。
 
 ## 如何安裝
 
