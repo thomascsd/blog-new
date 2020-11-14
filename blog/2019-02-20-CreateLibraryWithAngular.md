@@ -15,7 +15,7 @@ ng g library shared-comp
 
 先使用 Angular CLI 建立範例專案，再來用上列的指令，建立 Library。有時會覺得記住 CLI 的參數很麻煩，會使用[Angular Console](https://angularconsole.com/)幫忙建立。
 
-<img class="img-responsive" src="assets/images/10/10-01.gif">
+<img class="img-responsive" loading="lazy" src="assets/images/10/10-01.gif">
 
 ```
 ng g c header --project=shared-comp
@@ -23,7 +23,7 @@ ng g c header --project=shared-comp
 
 接下來，在 Library 中建立 component，這邊是建立 header component，也可以使用 Angular Console 建立。
 
-<img class="img-responsive" src="assets/images/10/10-2.png">
+<img class="img-responsive" loading="lazy" src="assets/images/10/10-2.png">
 
 如上圖，我們所建立 library 會在目錄 projects 下，例如這次我建立的 shared-comp，並且與一般的 Angular 專案不同，component 位於 lib 目錄下。
 
@@ -35,7 +35,7 @@ export * from './lib/shared-comp.module';
 
 接著，在 public_api.ts 中 export 我們所建立的 header component。
 
-<img class="img-responsive" src="assets/images/10/10-3.png">
+<img class="img-responsive" loading="lazy" src="assets/images/10/10-3.png">
 
 ```javascript
 //app.module.ts

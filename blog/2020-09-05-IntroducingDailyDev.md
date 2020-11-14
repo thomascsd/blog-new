@@ -8,34 +8,34 @@ published: true
 
 ## 如何安裝
 
-<img class="img-responsive" src="assets/images/17/17-01.png">
+<img class="img-responsive" loading="lazy" src="assets/images/17/17-01.png">
 
 首先至[daily.dev](https://daily.dev/)下戴瀏覽器的擴充套件，支援 FireFox 及 Chrome。
 
 ## 套件的功能
 
-<img class="img-responsive" src="assets/images/17/17-02.png">
+<img class="img-responsive" loading="lazy" src="assets/images/17/17-02.png">
 
 開啟新分頁後，就會顯示各個文章，並且第一次戴入時，有詢問是否顯示最近瀏覽的網站。
 
-<img class="img-responsive" src="assets/images/17/17-03.png">
+<img class="img-responsive" loading="lazy" src="assets/images/17/17-03.png">
 
 首先我們先選擇 Layout Settings，設定 daily.dev 相關的選項。
 
-<img class="img-responsive" src="assets/images/17/17-04.png">
-<img class="img-responsive" src="assets/images/17/17-05.png">
+<img class="img-responsive" loading="lazy" src="assets/images/17/17-04.png">
+<img class="img-responsive" loading="lazy" src="assets/images/17/17-05.png">
 
 例如，如上圖可以設定縮圖模式或是清單模式，我個人比較偏好清單模式，介面比較清爽，並且一個畫面上也可看到比較多的文章，另外也可以設定是 Dark mode 或是 Light mode。
 
-<img class="img-responsive" src="assets/images/17/17-06.png">
+<img class="img-responsive" loading="lazy" src="assets/images/17/17-06.png">
 
 可以在側邊欄上新增、刪除文章的來源。
 
-<img class="img-responsive" src="assets/images/17/17-07.png">
+<img class="img-responsive" loading="lazy" src="assets/images/17/17-07.png">
 
 並且可以將文章加入書籤的功能。
 
-<img class="img-responsive" src="assets/images/17/17-08.png">
+<img class="img-responsive" loading="lazy" src="assets/images/17/17-08.png">
 
 另外也可用 GitHub 帳號登入，同步書籤及文章的來源。
 
