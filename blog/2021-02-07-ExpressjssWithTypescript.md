@@ -66,7 +66,7 @@ export default class Server {
 }
 ```
 
-接著本人習慣建立 class，所以這邊建立名為`Server`的 class，建立了 3 個方法：
+接著我習慣建立 class，所以這邊建立名為`Server`的 class，建立了 3 個方法：
 
 - config：是設定 Express.js。
 
@@ -115,6 +115,8 @@ tsconfig 設定有時候覺得很麻煩，有發現一個 npm package：(tsconfi
 
 Express.js 的架構比較自由、鬆散，沒有規定要如何建立，這讓本人困擾了一段時間，之後參考這篇[文章](https://www.coreycleary.me/project-structure-for-an-express-rest-api-when-there-is-no-standard-way/)，所以設定以下的目錄結構。
 
+<img class="img-responsive" loading="lazy" src="assets/images/18/18-1.png">
+
 要如何實作 controller 架構，之後有發現 [routing-controllers](https://github.com/typestack/routing-controllers)，可以與 Express.js 整合，輕鬆實作 controller 架構。
 
 接著也希望能夠可以在 Express.js 實現 DI(Depency Injection)，所以使用了[typedi](https://github.com/typestack/typedi)，配合這 2 個套件如此可以實作本人覺得不錯的架構。
@@ -122,7 +124,7 @@ Express.js 的架構比較自由、鬆散，沒有規定要如何建立，這讓
 ### routing-controllers & typedi
 
 ```
-npm install    routing-controllers typedi class-validator class-transformer
+npm install routing-controllers typedi class-validator class-transformer
 ```
 
 使用 npm 安裝 routing-controllers、typedi，以及相依性的 package。
@@ -188,6 +190,8 @@ public setControllers() {
 ### Snippets
 
 因為每次都要設定 controller 覺得很麻煩，本人有[自定義 snippets](https://gist.github.com/thomascsd/19e1814f1b89c01588fa7f9f18540b20)，來減少一些重覆輸入的程式碼。
+
+<img class="img-responsive" loading="lazy" src="assets/images/18/18-2.gif">
 
 ## 安全性
 
