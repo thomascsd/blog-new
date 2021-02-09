@@ -1,6 +1,6 @@
 ---
 title: 使用TypeScript建立Express.js
-bgImageUrl: assets/images/18/17-0.jpg
+bgImageUrl: assets/images/18/18-0.png
 published: true
 ---
 
@@ -88,7 +88,7 @@ server.run(port);
 
 ## tsconfig.json
 
-tsconfig 設定有時候覺得很麻煩，有發現一個 npm package：(tsconfigs)[https://github.com/mightyiam/tsconfigs]，如此可以比較清鬆的設定。
+tsconfig 設定有時候覺得很麻煩，有發現一個 npm package：[tsconfigs](https://github.com/mightyiam/tsconfigs)，如此可以比較清鬆的設定。
 
 ```
 {
