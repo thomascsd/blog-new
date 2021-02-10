@@ -119,7 +119,7 @@ Express.js 的架構比較自由、鬆散，沒有規定要如何建立，這讓
 
 要如何實作 controller 架構，之後有發現 [routing-controllers](https://github.com/typestack/routing-controllers)，可以與 Express.js 整合，輕鬆實作 controller 架構。
 
-接著也希望能夠可以在 Express.js 實現 DI(Depency Injection)，所以使用了[typedi](https://github.com/typestack/typedi)，配合這 2 個套件如此可以實作本人覺得不錯的架構。
+接著也希望能夠可以在 Express.js 實現 DI(Dependency Injection)，所以使用了[typedi](https://github.com/typestack/typedi)，配合這 2 個套件如此可以實作本人覺得不錯的架構。
 
 ### routing-controllers & typedi
 
