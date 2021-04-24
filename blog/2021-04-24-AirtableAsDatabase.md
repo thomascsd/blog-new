@@ -7,18 +7,22 @@ published: true
 當開始寫自已的 Side Project 時，常常遇到問題是，不知道要將資料寫入至那裡?最初是使用[restdb](https://restdb.io/)，優點：很好串接，有 UI 介面很好設定，但是只能有 2 個免費的。
 之後尋找了一些解決方案，發現[AirTable](https://airtable.com/)符合我的需求。
 
-- 優點： -有 UI 介面，可以很方便設定欄位。
-- 欄位支援很多的類型，連自動編號的類型也有。 -使用 CSV，直接匯入。 -缺點： -每秒可接受的 Request 數有限制，現在每秒最多是 5 個 Request，如果是一般小的 Side Project，這個限制還可以接受。
+- 優點：
+  - 有 UI 介面，可以很方便設定欄位。
+  - 欄位支援很多的類型，連自動編號的類型也有。
+  - 使用 CSV，直接匯入。
+- 缺點：
+  - 每秒可接受的 Request 數有限制，現在每秒最多是 5 個 Request，如果是一般小的 Side Project，這個限制還可以接受。
 
 ## 串接方式
 
 首先要串接至 AirTable 需要 ApiKey ，可以參考[文件](https://support.airtable.com/hc/en-us/articles/219046777-How-do-I-get-my-API-key-)，接著取得 Base ID，如下圖所示，點選 Help > API documetation。
 
-<img class="img-responsive" loading="lazy" src="assets/images/19/19-1.png">
+<img class="img-responsive" loading="lazy" src="assets/images/19/19-01.png">
 
 在文件中就可以找到呼叫 API 時，需要的 Base ID。並且也可以看到官方的 JavaScript API client，但是我覺得官方的不好用，會使用其他的 Libary 來串接。
 
-<img class="img-responsive" loading="lazy" src="assets/images/19/19-2.png">
+<img class="img-responsive" loading="lazy" src="assets/images/19/19-02.png">
 
 ### 使用 API Client
 
