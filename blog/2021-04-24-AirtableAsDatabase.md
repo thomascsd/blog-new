@@ -1,6 +1,6 @@
 ---
 title: 將AirTable做為資料庫的心得
-bgImageUrl: assets/images/19/19-0.png
+bgImageUrl: assets/images/19/19-0.jpg
 published: true
 ---
 
@@ -174,6 +174,6 @@ async updateData<T extends BaseModel>(baseId: string, tableName: string, model: 
 ## 結論
 
 雖然還有其他的儲存資料的解決方案，比如使用 Google sheets，或是使用其它的雲端免費方案，但使用 AirTable 一陣子後，有符合我的期待，目前使用蠻滿意的。
-有將這些程式包成 [npm package]()，大家可以參考看看。
+有將這些程式包成 [npm package](https://www.npmjs.com/package/@thomascsd/stools)，大家可以參考看看。
 
 原始碼的位置：[https://github.com/thomascsd/stools](https://github.com/thomascsd/stools)
