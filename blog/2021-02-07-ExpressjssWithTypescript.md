@@ -4,6 +4,8 @@ bgImageUrl: assets/images/18/18-0.png
 published: true
 ---
 
+(2021-04-26 更新)service class 注入，@Inject 改為 @Service。
+
 Express.js 是很受歡迎的 Node.js 框架，一般看來，比較少文章介紹使用 TypeScript 建立 Express.js，所以就想寫篇使用 TypeScript 建立 Express.js 的方式，並且 Express.js 的架構是比較鬆散的，並且有發現兩個套件：[routing-controller](https://github.com/typestack/routing-controllers)及[typedi](https://github.com/typestack/typedi)，一些心得感想，請大家參考看看。
 
 ## 起手式
@@ -132,11 +134,11 @@ npm install routing-controllers typedi class-validator class-transformer
 ```javascript
 // ContactControoler.ts
 import { JsonController, Get, Post, Body } from 'routing-controllers';
-import { Inject } from 'typedi';
+import { Service } from 'typedi';
 import { ContactService } from '../services/ContactServices';
 import { Contact } from '../models/Contact';
 
-@Inject()
+@Service()
 @JsonController()
 export class ContactController {
  constructor(private contactService: ContactService) {}
