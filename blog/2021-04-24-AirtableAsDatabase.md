@@ -4,13 +4,13 @@ bgImageUrl: assets/images/19/19-0.jpg
 published: true
 ---
 
-當開始寫自已的 Side Project 時，常常遇到問題是，不知道要將資料寫入至那裡?最初是使用[restdb](https://restdb.io/)，優點：很好串接，有 UI 介面很好設定，但是只能有 2 個免費的。
+當開始寫自已的 Side Project 時，常常遇到問題是，不知道要將資料寫入至那裡?最初是使用[restdb](https://restdb.io/)，優點：很好串接，有 UI 介面很好設定，但是只能有 2 個免費的資料庫。
 之後尋找了一些解決方案，發現[AirTable](https://airtable.com/)符合我的需求。
 
 - 優點：
   - 有 UI 介面，可以很方便設定欄位。
   - 欄位支援很多的類型，連自動編號的類型也有。
-  - 使用 CSV，直接匯入。
+  - 使用 CSV，可以直接匯入資料。
 - 缺點：
   - 每秒可接受的 Request 數有限制，現在每秒最多是 5 個 Request，如果是一般小的 Side Project，這個限制還可以接受。
 

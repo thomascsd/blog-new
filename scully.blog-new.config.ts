@@ -1,5 +1,6 @@
 import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
 import { getSitemapPlugin } from '@gammastream/scully-plugin-sitemap';
+import 'prismjs/components/prism-csharp';
 // import '@notiz/scully-plugin-rss';
 
 setPluginConfig('md', { enableSyntaxHighlighting: true });
