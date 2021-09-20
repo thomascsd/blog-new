@@ -1,6 +1,6 @@
 ---
 title: Netlify functions 初體驗記錄
-bgImageUrl: assets/images/20/20-0.jpg
+bgImageUrl: assets/images/22/22-0.jpg
 published: true
 ---
 
