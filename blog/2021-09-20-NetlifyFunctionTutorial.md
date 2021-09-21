@@ -4,7 +4,7 @@ bgImageUrl: assets/images/22/22-0.jpg
 published: true
 ---
 
-前一陣子，我嘗試使用 [Netlify functions](https://www.netlify.com/products/functions/) ，發現簡單易用，整合至舊有專案也是挻容易的，就寫篇文章做個記錄。
+一直以來斷斷續續接獨 Servless funcion 的服務，從 FireBase 到 Azure 都有，但是一些原因，而覺得沒有符合我的需求，直到前一陣子，我嘗試使用 [Netlify functions](https://www.netlify.com/products/functions/) ，發現簡單易用，並且也整合 CI/CD ，如果想整合至舊有專案也是挻方便的，就想寫篇文章做個記錄。
 
 <img class="img-responsive" loading="lazy" src="assets/images/22/22-08.png">
 
@@ -12,7 +12,7 @@ published: true
 
 ## 開始
 
-這次是範例是將概有的 [form-builder-demo](https://github.com/thomascsd/form-builder-demo) 整合進 Netlify function。
+這次是範例是將概有的 Side Project [form-builder-demo](https://github.com/thomascsd/form-builder-demo) 整合進 Netlify function。
 
 ```
 npm install netlify-cli -g
@@ -43,9 +43,9 @@ netlify init
 
 執行完後，會一起建立 netlify.toml ，設定值就是剛剛執行`Netlify init`  所詢問問題的答案，用來設定 Netlify functions 的。
 
--functions：設定存放 Netlify function 的目錄，預設是在 /netlify/functions。
--command：設定建置時，要執行的指令，我是設定 'npm run build' 。
--publish：設定建置後檔案的位置，我是用預設的 dist。
+- functions：設定存放 Netlify function 的目錄，預設是在 /netlify/functions。
+- command：設定建置時，要執行的指令，我是設定 'npm run build' 。
+- publish：設定建置後檔案的位置，我是用預設的 dist。
 
 ## 開發
 
@@ -66,11 +66,11 @@ export { handler };
 
 <img class="img-responsive" loading="lazy" src="assets/images/22/22-02.png">
 
--event：定義如上圖所示，可以從 node_modules\@netlify\functions\src\function\event.d.ts 中找到，如同了包裝 Request 類似。
--boby：與 Express 一樣使用 body 取得 post 來的資訊。
--queryStringParameters：使用此屬性取得 QueryString 資訊。
+- event：定義如上圖所示，可以從 node_modules\@netlify\functions\src\function\event.d.ts 中找到，如同了包裝 Request 類似。
+- boby：與 Express 一樣使用 body 取得 post 來的資訊。
+- queryStringParameters：使用此屬性取得 QueryString 資訊。
 
--response：如同程式自我描述般的，回傳 `statusCode` 及 `body`，應 `body`需為字串，所使用 `JSON.stringify` 將物件轉成字串。
+- response：如同程式自我描述般的，回傳 `statusCode` 及 `body`，應 `body`需為字串，所使用 `JSON.stringify` 將物件轉成字串。
 
 <img class="img-responsive" loading="lazy" src="assets/images/22/22-03.png">
 
