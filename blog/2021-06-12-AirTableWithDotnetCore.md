@@ -16,7 +16,7 @@ published: true
 
 仿造原本 TypeScript 的寫法，寫一個泛型類別，將取得資料、新增、修改及刪除都封裝起來。
 
-```cs
+```
 public class DataService : IDataService
     {
         private string m_ApiKey;
@@ -49,7 +49,7 @@ public class DataService : IDataService
 
 ## 取得資料
 
-```cs
+```
 // BaseModel.cs
 public class BaseModel
     {
@@ -57,7 +57,7 @@ public class BaseModel
     }
 ```
 
-```cs
+```
 // DataService.cs
 public async Task<IEnumerable<T>> GetDatas<T>(string baseId, string tableName) where T : BaseModel
         {
@@ -98,7 +98,7 @@ public async Task<IEnumerable<T>> GetDatas<T>(string baseId, string tableName) w
 
 ## 新增資料
 
-```cs
+```
 public async Task<AirtableCreateUpdateReplaceRecordResponse> SaveData<T>(string baseId, string tableName, T model) where T : BaseModel
         {
             var fields = this.GetFields<T>(model);
@@ -137,7 +137,7 @@ private Fields GetFields<T>(T model) where T : BaseModel
 
 ## 修改資料
 
-```cs
+```
 public async Task<AirtableCreateUpdateReplaceRecordResponse> UpdateData<T>(string baseId, string tableName, T model) where T : BaseModel
         {
             var fields = this.GetFields<T>(model);

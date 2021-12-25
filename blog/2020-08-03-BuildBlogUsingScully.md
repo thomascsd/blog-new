@@ -1,10 +1,10 @@
 ---
-title: 使用Scully建立Blog的心得記錄
+title: 使用 Angular Static Generator - Scully 建立Blog的心得記錄
 bgImageUrl: assets/images/15/15-0.jpg
 published: true
 ---
 
-一直以來 Angular 缺 Static Site Genrator，像是 Vue.js 有 Nuxt.js，而 React.js 也有 Gatsby.js，終於 Angular 也出了 Static Site Generator - [Scully](https://scully.io)，並且我的 Blog 從最早的 Jekyll，之後是用 Nuxt.js，現在要用 Scully 第三次改寫，因為我對 Angular 還是比較熟悉的原故，建立 Blog 的過程心程分享給大家參考看看
+一直以來 Angular 缺 Static Site Generator，像是 Vue.js 有 Nuxt.js，而 React.js 也有 Gatsby.js，終於 Angular 也出了 Static Site Generator - [Scully](https://scully.io)，並且我的 Blog 從最早的 Jekyll，之後是用 Nuxt.js，現在要用 Scully 第三次改寫，因為我對 Angular 還是比較熟悉的原故，建立 Blog 的過程心程分享給大家參考看看
 
 ## 起手式
 

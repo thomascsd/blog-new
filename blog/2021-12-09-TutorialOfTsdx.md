@@ -39,7 +39,7 @@ npx tsdx create mylib
 
 測試方面是使用 Jest ，有 React 的背景的人，應該很多都有使用過，而這是我第一次使用 Jest 來進行測試。當測試執行完畢，會直接顯示詳細的測試資訊，如同上圖，這部份有讓我有點驚艷到，就連未測試的程式行數也會顯示。
 
-```
+```javascript
 // jest.config.js
 module.exports = {
   verbose: true,
