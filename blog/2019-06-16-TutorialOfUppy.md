@@ -10,19 +10,19 @@ published: true
 
 ## 安裝
 
-```sh
+```
 npm install uppy
 ```
 
 當執行 npm install uppy 時，是安裝 Uppy 的全部功能，這當然會使得安裝的檔案容量變大。
 
-```sh
+```
 npm install @uppy/core @uppy/dashboard @uppy/xhr-upload
 ```
 
 一般的作法，就是安裝所需的套件，如果想要使用 Dashboard，可以只安裝@uppy/dashboard 及@uppy/xhr-upload。
 
-```sh
+```
 npm install @uppy/file-input @uppy/progress-bar @uppy/xhr-upload
 ```
 

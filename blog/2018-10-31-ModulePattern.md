@@ -94,7 +94,7 @@ const window.NS = window.NS || {};
 
 ## TypeScript
 
-```'typescript
+```javascript
 namespace NS {
   function addUser(){
      const count = $('li').length;
