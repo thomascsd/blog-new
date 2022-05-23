@@ -26,7 +26,7 @@ Windows Terminal 整合 cmd、PowerShell，並可 以自定樣式，但是還是
 
 ## ohmyposh 安裝
 
-ohmyposh 是跨平台的套件，而我是使用 Windows ，所以是選擇 scoop 來進行安裝，可以參考官方的(文件)[https://ohmyposh.dev/docs/installation/windows]來進行。
+ohmyposh 是跨平台的套件，而我是使用 Windows ，所以是選擇 scoop 來進行安裝，可以參考官方的[文件](https://ohmyposh.dev/docs/installation/windows)來進行。
 
 在 PowerShell 輸入下列指令，即可安裝完成。
 
@@ -74,19 +74,21 @@ Windows terminal 還需將字型設為 MesloLGM NF。
 
 可以顯示正確的字型。
 
-<img class="img-responsive" loading="lazy" src="assets/images/24/24-05.png">
+<img class="img-responsive" loading="lazy" src="assets/images/24/24-04.png">
 
 ## 主題
 
 預設的主題比較單調，可以自定樣式或是戴入其他人建立好的[主題](https://ohmyposh.dev/docs/themes)，第一步輸入`Get-PoshThemes` 如果初次使用沒有指定目錄的話，會決定主題要存放的位置，不然會顯示目前已下戴的主題。
 
-<img class="img-responsive" loading="lazy" src="assets/images/24/24-06.png">
+<img class="img-responsive" loading="lazy" src="assets/images/24/24-05.png">
 
 目前選擇的主題是[slim](https://ohmyposh.dev/docs/themes#slim)，這個主題有包含 Node.js 的版本，和顯示 GIT 的狀態，都是開發上所必要的資訊。之此之外，調整 Profile，加上`--config`參數指定主題，之後重新戴入即可。
 
 ```
 oh-my-posh init pwsh --config D:\themes\slim.omp.json | Invoke-Expression
 ```
+
+<img class="img-responsive" loading="lazy" src="assets/images/24/24-06.png">
 
 ## 結論
 
