@@ -4,7 +4,7 @@ bgImageUrl: assets/images/08/08-0.jpg
 published: true
 ---
 
-這篇會繼續上篇的主題：Module，這篇會講述 ES6（ES2015）Module 寫法，而上一篇是[談談 JavaScript Module part1](https://thomascsd.github.io/module-pattern)。
+這篇會繼續上篇的主題：Module，這篇會講述 ES6（ES2015）Module 寫法，而上一篇是[談談 JavaScript Module part1](https://thomascsd.github.io/blog/module-pattern)。
 
 ## Module 建立
 

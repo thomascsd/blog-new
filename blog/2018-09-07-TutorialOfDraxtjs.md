@@ -5,7 +5,7 @@ published: true
 
 Node.js 處理檔案我個人覺得不是很方便，有時候會覺得卡卡的。之前有發現 Node.js 套件[draxt.js](https://github.com/ramhejazi/draxt)，它封裝了[glob](https://github.com/isaacs/node-glob)和[fs-extra](https://github.com/jprichardson/node-fs-extra)這兩個套件，並提供類似 jQuery 的語法，讓檔案的處理變簡單了。
 
-因為我的 Blog 是分成兩個專案，一個是開發使用，一個是實際 Blog 的網站，而我使用 nuxt.js 建立 Blog 的心得，可以參考之前的[文章](/example-of-promise)。之前的複製檔案都是用手動，所以想寫個小程式幫助複製檔案，剛好趁這個機會練習使用 draxt.js 這個套件。
+因為我的 Blog 是分成兩個專案，一個是開發使用，一個是實際 Blog 的網站，而我使用 nuxt.js 建立 Blog 的心得，可以參考之前的[文章](/blog/example-of-promise)。之前的複製檔案都是用手動，所以想寫個小程式幫助複製檔案，剛好趁這個機會練習使用 draxt.js 這個套件。
 
 ## 原始碼
 
@@ -75,7 +75,7 @@ const writeFileAsync = util.promisify(fs.writeFile);
 
 一開始戴入所需的套件，這邊有用 util.promisify 將原本是 callback 型式的 readFile 及 writeFile，轉換成 Promise 的型式。
 
-因為 draxt.js 的方法都是設計成回傳 Promise 物件，可以使用 async/await 的語法，所以這裡用 async 的 IIFE 將檔案操作的邏輯包起來。關於 Promise，可以參考我的上一篇的[文章](/nuxtjs-and-nuxtent)。
+因為 draxt.js 的方法都是設計成回傳 Promise 物件，可以使用 async/await 的語法，所以這裡用 async 的 IIFE 將檔案操作的邏輯包起來。關於 Promise，可以參考我的上一篇的[文章](/blog/nuxtjs-and-nuxtent)。
 
 ```javascript
 const rootPath = path.join(process.cwd(), '..');

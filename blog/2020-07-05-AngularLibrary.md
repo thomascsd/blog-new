@@ -71,7 +71,7 @@ export class HomeComponent implements OnInit {
 
 [ngx-dynamic-form-builder](https://github.com/EndyKaufman/ngx-dynamic-form-builder)是將 class-valdator 整合的 Angular library， 而 class-validator 則是驗證用的 Library，使用 decorator 設定資料驗證的規則。
 
-我在上一篇的[文章](/class-validator-and-ngx-dynamic-form-builder)有介紹過。
+我在上一篇的[文章](/blog/class-validator-and-ngx-dynamic-form-builder)有介紹過。
 
 ## 結論
 
