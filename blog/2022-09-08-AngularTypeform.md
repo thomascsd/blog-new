@@ -34,13 +34,13 @@ interface MemberForm {
 }
 ```
 
-接著替換成 'FormGroup'、 'FormBuilder'，並且建立使用於 FormBuilder 上的 interface。
+接著替換成 `FormGroup`、 `FormBuilder`，並且建立使用於 `FormBuilder` 上的 interface。
 
 ```javascript
 group: FormGroup<MemberForm>;
 ```
 
-接著在 'FormGroup' 中使用已建立的 'MemberForm'。
+接著在 `FormGroup` 中使用已建立的 `MemberForm`。
 
 ```javascript
   constructor(
@@ -111,11 +111,11 @@ import { ToForm } from '../utils/toForm';
 group: FormGroup<ToForm<Member>>;
 ```
 
-只需改成 'FormGroup<ToForm<Member>>' 即可。
+只需改成 `FormGroup<ToForm<Member>>` 即可。
 
 ## [class-validator](https://github.com/typestack/class-validator)
 
-因為驗證是每個 Form 都是必須會需要做的行為，所以會使用 'class-validator' 來共同驗證，之前有接觸過 'class-validator' 這個套件，是用 decorator 的方式，在物件的屬性上設定所要驗證的格式，之前都是在 Node.js 上來使用，不過 Angular 上使用的話，需要整合一下。
+因為驗證是每個 Form 都是必須會需要做的行為，所以會使用 `class-validator` 來共同驗證，之前有接觸過 `class-validator` 這個套件，是用 decorator 的方式，在物件的屬性上設定所要驗證的格式，之前都是在 Node.js 上來使用，不過 Angular 上使用的話，需要整合一下。
 
 ```javascript
 import {
@@ -179,7 +179,7 @@ export class Member extends BaseModel {
 }
 ```
 
-class-validator 預設已經定義一些常用的驗證方式，例如是否必填、Email 或是手機驗證，直接套用在類別上的屬性即可，可以參考[文件](https://github.com/typestack/class-validator#validation-decorators)。
+`class-validator` 預設已經定義一些常用的驗證方式，例如是否必填、Email 或是手機驗證，直接套用在類別上的屬性即可，可以參考[文件](https://github.com/typestack/class-validator#validation-decorators)。
 
 ```javascript
 import { ValidationErrors, ValidatorFn } from '@angular/forms';
