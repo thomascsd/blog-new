@@ -4,6 +4,8 @@ bgImageUrl: assets/images/15/15-0.jpg
 published: true
 ---
 
+2022/09/09 更新：程式碼著色，改為 `prismjs`
+
 一直以來 Angular 缺 Static Site Generator，像是 Vue.js 有 Nuxt.js，而 React.js 也有 Gatsby.js，終於 Angular 也出了 Static Site Generator - [Scully](https://scully.io)，並且我的 Blog 從最早的 Jekyll，之後是用 Nuxt.js，現在要用 Scully 第三次改寫，因為我對 Angular 還是比較熟悉的原故，建立 Blog 的過程心程分享給大家參考看看
 
 ## 起手式
@@ -53,14 +55,16 @@ export const config: ScullyConfig = {
 但是只有設定到一半，因為 css 還沒戴入，所以程式碼就是預設的文字顏色。
 
 ```
-npm install highlight.js
+npm install prismjs
 ```
 
-因為 Plugin - MD 是使用 highlight.js 來著色程式碼，所以另外安裝 highlight.js，接著再取得我們所需要的 css。
+因為 Plugin - MD 是使用 `prismjs` 來著色程式碼，所以另外安裝 `prismjs`，接著再取得我們所需要的 css。
 
-<img class="img-responsive" loading="lazy" src="assets/images/16/16-4.png">
+```css
+@import '~prismjs/themes/prism-coy.min.css';
+```
 
-在 angular.json 裡的 styles 加上自已所喜好的樣式 css。
+接著在 `style.css` 戴入樣式。
 
 <img class="img-responsive" loading="lazy" src="assets/images/16/16-5.png">
 

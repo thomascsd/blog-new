@@ -211,7 +211,7 @@ export function utilValidator<T extends {}>(model: T, prop: string): ValidatorFn
 }
 ```
 
-為了要將 'class-validator' 和 'FormGroup' 、'FormControl' 整合，本人建立了共同方法，首先使用 'validateSync' 來驗證 model，接著取得特定屬性的錯誤訊息。
+為了要將 'class-validator' 和 'FormGroup' 、'FormControl' 整合，本人建立了共同方法，首先使用 `validateSync` 來驗證 model，接著取得特定屬性的錯誤訊息。
 
 ```html
 <div class="text-danger" *ngIf="group.controls.name.errors?.hasError">
@@ -219,7 +219,7 @@ export function utilValidator<T extends {}>(model: T, prop: string): ValidatorFn
 </div>
 ```
 
-而如果有錯誤的話，固定回傳格式為 '{ hasError: true, msg }'，所以頁面上只需判斷 'hasError === true'即可。
+而如果有錯誤的話，固定回傳格式為 `{ hasError: true, msg }`，所以頁面上只需判斷 `hasError === true`即可。
 
 <img class="img-responsive" loading="lazy" src="assets/images/25/25-02.png">
 
