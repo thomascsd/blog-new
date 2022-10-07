@@ -1,5 +1,5 @@
 import { Component, OnInit, Renderer2, Inject, AfterViewInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 import { DOCUMENT } from '@angular/common';
 import { ScullyRoutesService, ScullyRoute } from '@scullyio/ng-lib';
 import { BlogService } from '../core/blog.service';
@@ -18,14 +18,19 @@ export class BlogComponent implements OnInit {
     private blogService: BlogService,
     private titleService: Title,
     private renderer2: Renderer2,
-    @Inject(DOCUMENT) private document
+    @Inject(DOCUMENT) private document,
+    private metaService: Meta
   ) {}
 
   ngOnInit() {
     this.scullyService.getCurrent().subscribe((route) => {
       this.post = route;
       this.post.date = this.blogService.getPostDateFormRoute(this.post.route);
-      this.titleService.setTitle(route.title);
+      this.titleService.setTitle(`${route.title} - Thomas Blog`);
+      this.metaService.addTags([
+        { name: 'keywords', content: `${route.title} ${route.keyword || ''}` },
+        { name: 'description', content: `${route.title} ${route.description || ''}` },
+      ]);
     });
 
     const s = this.renderer2.createElement('script');

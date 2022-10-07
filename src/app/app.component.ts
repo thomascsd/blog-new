@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 import { Router, NavigationEnd } from '@angular/router';
 declare let gtag: any;
 
@@ -8,21 +9,13 @@ declare let gtag: any;
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private metaService: Meta) {}
 
   ngOnInit() {
-    // this.router.events
-    //   .pipe(
-    //     distinctUntilChanged((previous: any, current: any) => {
-    //       if (current instanceof NavigationEnd) {
-    //         return previous.url === current.url;
-    //       }
-    //       return true;
-    //     })
-    //   )
-    //   .subscribe((x: any) => {
-    //     gtag('event', 'page_view', { page_path: x.url });
-    //   });
+    this.metaService.addTags([
+      { name: 'keywords', content: 'JavaScript Node.js Express.js TypeScript C# .NET Blog' },
+      { name: 'description', content: 'JavaScript And .NET Blog' },
+    ]);
 
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
