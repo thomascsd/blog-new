@@ -11,42 +11,29 @@ const writeFileAsync = util.promisify(fs.writeFile);
   const blogDistPath = `/thomascsd.github.io/`;
   let $blogSrc = await $('./dist/static/**');
   const $blogDist = await $('.' + blogDistPath + '**', {
-    cwd: rootPath
+    cwd: rootPath,
   });
 
   $blogDist
-    .filter(
-      node =>
-        (node.isDirectory() && node.baseName.indexOf('.') === -1) ||
-        node.isFile()
-    )
-    .each(async node => {
-      consola.info(
-        `step1-1:刪除thomascsd.github.io內的檔案，name:${node.pathName}`
-      );
+    .filter((node) => (node.isDirectory() && node.baseName.indexOf('.') === -1) || node.isFile())
+    .each(async (node) => {
+      consola.info(`step1:刪除thomascsd.github.io內的檔案，name:${node.pathName}`);
       await node.remove();
     });
 
-  /*consola.info(`step2:api.js的localhost更換成thomascsd.github.io`);
-  const $api = $blogSrc
-    .filter(
-      node => node.baseName.indexOf('app.') !== -1 && node.extension === 'js'
-    )
-    .first();
-
-  let content = await readFileAsync($api.pathName);
-  content = content
-    .toString()
-    .replace(/http:\/\/localhost:3200/i, 'https://thomascsd.github.io');
-  await writeFileAsync($api.pathName, content);*/
+  consola.info('step2:更新sitemap.xml的網址');
+  const sitemapPath = './dist/static/sitemap.xml';
+  const buffer = await readFileAsync(sitemapPath);
+  let sitemap = buffer.toString();
+  sitemap = sitemap.replace(/<loc>(.*)<\/loc>/gm, '<loc>$1/</loc>');
+  sitemap = sitemap.replace('https://thomascsd.github.io//', 'https://thomascsd.github.io/');
+  await writeFileAsync(sitemapPath, sitemap);
 
   const blogPath = path.join(rootPath, blogDistPath);
 
   $blogSrc = await $('./dist/static');
-  $blogSrc.each(async node => {
-    consola.info(
-      `step2:複製檔案至thomascsd.github.io內的檔案，name:${node.pathName}`
-    );
+  $blogSrc.each(async (node) => {
+    consola.info(`step3:複製檔案至thomascsd.github.io內的檔案，name:${node.pathName}`);
 
     try {
       await node.copy(blogPath);
@@ -54,4 +41,4 @@ const writeFileAsync = util.promisify(fs.writeFile);
       consola.error(err);
     }
   });
-})().catch(err => consola.error(err));
+})().catch((err) => consola.error(err));
