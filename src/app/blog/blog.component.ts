@@ -27,10 +27,14 @@ export class BlogComponent implements OnInit {
       this.post = route;
       this.post.date = this.blogService.getPostDateFormRoute(this.post.route);
       this.titleService.setTitle(`${route.title} - Thomas Blog`);
-      this.metaService.addTags([
-        { name: 'keywords', content: `${route.title} ${route.keyword || ''}` },
-        { name: 'description', content: `${route.title} ${route.description || ''}` },
-      ]);
+      this.metaService.updateTag({
+        name: 'keywords',
+        content: `${route.title} ${route.keyword || ''}`,
+      });
+      this.metaService.updateTag({
+        name: 'description',
+        content: `${route.title} ${route.description || ''}`,
+      });
     });
 
     const s = this.renderer2.createElement('script');
