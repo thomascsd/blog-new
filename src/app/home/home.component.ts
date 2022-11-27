@@ -37,10 +37,8 @@ export class HomeComponent implements OnInit {
       map(([routes, params]) => {
         this.page = parseInt(params.page || 1, 10);
 
-        const items = routes
-          .filter((route) => !!route.title)
-          .reverse()
-          .slice((this.page - 1) * pageSize, this.page * pageSize);
+        const items = routes.filter((route) => !!route.title).reverse();
+        // .slice((this.page - 1) * pageSize, this.page * pageSize);
 
         items.forEach((route) => (route.date = this.blogService.getPostDateFormRoute(route.route)));
 
