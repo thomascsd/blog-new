@@ -24,16 +24,40 @@ export class BlogComponent implements OnInit {
 
   ngOnInit() {
     this.scullyService.getCurrent().subscribe((route) => {
+      const title = `${route.title} - Thomas Blog`;
+      const desc = `${route.title} ${route.description || ''}`;
       this.post = route;
       this.post.date = this.blogService.getPostDateFormRoute(this.post.route);
-      this.titleService.setTitle(`${route.title} - Thomas Blog`);
+      this.titleService.setTitle(title);
+      this.metaService.updateTag({
+        name: 'og:title',
+        content: title,
+      });
+      this.metaService.updateTag({
+        name: 'twitter:title',
+        content: title,
+      });
+      this.metaService.updateTag({
+        name: 'og:site_name',
+        content: title,
+      });
+
       this.metaService.updateTag({
         name: 'keywords',
         content: `${route.title} ${route.keyword || ''}`,
       });
+
       this.metaService.updateTag({
         name: 'description',
-        content: `${route.title} ${route.description || ''}`,
+        content: desc,
+      });
+      this.metaService.updateTag({
+        name: 'og:description',
+        content: desc,
+      });
+      this.metaService.updateTag({
+        name: 'twitter:description',
+        content: desc,
       });
     });
 

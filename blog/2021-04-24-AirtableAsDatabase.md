@@ -1,6 +1,7 @@
 ---
 title: 將AirTable做為資料庫的心得
 bgImageUrl: assets/images/19/19-0.jpg
+description: 目前覺得 AirTable 寫 Side Project 的好幫手
 published: true
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: 使用TypeScript建立Express.js-使用Ts.ED
 bgImageUrl: assets/images/27/27-0.jpg
+description: Ts.ED 是一個強大且易於使用的 framework，可以將 TypeScipt 與 Express.js整合，並使用 Controller 的方式建立 Express.js
 published: true
 ---
 

@@ -1,10 +1,11 @@
 ---
-title: 將AirTable做為資料庫的心得 - .net core 篇
+title: 將AirTable做為資料庫的心得 - .NET Core 篇
 bgImageUrl: assets/images/20/20-0.jpg
+description: 目前覺得 AirTable 寫 Side Project 的好幫手
 published: true
 ---
 
-我在上一篇的文章[將 AirTable 做為資料庫的心得](https://thomascsd.github.io/blog/2021-04-24-AirtableAsDatabase)，有寫到：我為什麼使用 [AirTable](https://airtable.com/) 當作資料庫，以及優、缺點，並且環境是 Node.js ，語言是 TypeScript ，而這次想要使用 .net core 、 C# 來改寫。
+我在上一篇的文章[將 AirTable 做為資料庫的心得](https://thomascsd.github.io/blog/2021-04-24-AirtableAsDatabase)，有寫到：我為什麼使用 [AirTable](https://airtable.com/) 當作資料庫，以及優、缺點，並且環境是 Node.js ，語言是 TypeScript ，而這次想要使用 .NET Core 、 C# 來改寫。
 
 ## 串接 AirTable
 
@@ -156,6 +157,6 @@ public async Task<AirtableCreateUpdateReplaceRecordResponse> UpdateData<T>(strin
 
 ## 結論
 
-目前覺得 [AirTable](https://airtable.com/) 寫 Side Project 的好幫手，除了上次的 TypeScript 的版本外，而這次想轉成 .net core 的版本，之後我在將這些程式包裝成 Nuget 的版本，請大家參考看看。
+目前覺得 [AirTable](https://airtable.com/) 寫 Side Project 的好幫手，除了上次的 TypeScript 的版本外，而這次想轉成 .NET Core 的版本，之後我在將這些程式包裝成 Nuget 的版本，請大家參考看看。
 
 原始碼位置：[https://github.com/thomascsd/BookApi](https://github.com/thomascsd/BookApi)
