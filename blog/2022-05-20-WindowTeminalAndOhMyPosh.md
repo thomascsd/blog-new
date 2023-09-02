@@ -1,6 +1,7 @@
 ---
 title: 我的Terminal 設定方式 - Windows Terminal & ohmyposh
 bgImageUrl: assets/images/24/24-0.jpg
+description: Windows Terminal 整合 cmd、PowerShell，並可 以自定樣式，但是還是希望和 oh my zsh一樣，可以顯示更多資訊，直到最近發現 ohmyposh可以讓 PowerShell 更好用
 published: true
 ---
 
