@@ -1,7 +1,7 @@
 ---
 title: 將AirTable做為資料庫的心得 - .NET Core 篇
 bgImageUrl: assets/images/20/20-0.jpg
-description: 目前覺得 AirTable 寫 Side Project 的好幫手
+description: 尋找了一些解決方案，發現AirTable符合我的需求
 published: true
 ---
 

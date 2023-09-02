@@ -1,6 +1,7 @@
 ---
 title: tsdx - 快速建立 npm 套件樣板的CLI工具
 bgImageUrl: assets/images/23/23-0.jpg
+description: 快速建立 npm 套件，所以在 GitHub 上尋找有沒有方便的套件，結果發現到了 tsdx，這個方便的 CLI 工具
 published: true
 ---
 
