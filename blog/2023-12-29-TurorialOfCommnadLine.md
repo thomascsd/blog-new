@@ -1,5 +1,5 @@
 ---
-title: 好用套件-  commandline
+title: .NET 好用套件 - commandline
 bgImageUrl: assets/images/29/29-0.jpeg
 description: 好用的套件 commandline，解析 CLI 參數，並使用Attribute來設定options
 published: true
@@ -86,5 +86,3 @@ Func<DefaultOptions> SelectOptions(string[] args)
 <img class="img-responsive" loading="lazy" src="assets/images/29/29-3.png">
 
 如同上面的程式碼，可以根據不同名稱，取回不同的 options 物件，例如名稱(-n/--name)為 action 時，可以多傳入參數 action。
-
-## 結論
