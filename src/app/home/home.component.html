@@ -1,8 +1,6 @@
-<div>
-  <!-- Page Header -->
+<!-- <div>
   <app-header></app-header>
 
-  <!-- Main Content -->
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -17,21 +15,43 @@
           </div>
           <hr />
         </div>
-
-        <!-- Pager-->
-        <!-- <ul class="pager">
-          <li class="">
-            <a href="javascript:void(0)" (click)="previous()" [ngClass]="{ 'd-none': page === 1 }"
-              >&larr; Prev</a
-            >
-          </li>
-          <li class="">
-            <a href="javascript:void(0)" (click)="next()" [ngClass]="{ 'd-none': itemCount !== 10 }"
-              >Next &rarr;</a
-            >
-          </li>
-        </ul> -->
       </div>
     </div>
   </div>
-</div>
+</div> -->
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-8 is-offset-2">
+          <figure class="image is-16by9">
+            <img src="assets/images/bg1920x872.jpg" alt="" />
+          </figure>
+        </div>
+      </div>
+
+      <ng-container *ngFor="let link of links$ | async">
+        <section class="section">
+          <div class="columns">
+            <div class="column is-8 is-offset-2">
+              <div class="content is-medium">
+                <h2 class="subtitle is-4">{{ link.date }}</h2>
+                <a [routerLink]="[link.route]">
+                  <h1 class="title">{{ link.title }}</h1>
+                </a>
+                <!-- <p>
+                  This is a starter template for creating a beautiful, customizable blog with
+                  minimal effort. You’ll only have to change a few settings and you’re ready to go.
+                  As with all Jigsaw sites, configuration settings can be found in config
+                </p> -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="is-divider"></div>
+      </ng-container>
+    </div>
+  </div>
+</section>
