@@ -1,26 +1,28 @@
-<div>
-  <!-- Page Header -->
-  <app-post-header
-    *ngIf="post"
-    [title]="post.title"
-    [postDate]="post.date"
-    [bgImageUrl]="post.bgImageUrl"
-  ></app-post-header>
-
-  <article>
+<section class="hero">
+  <div class="hero-body">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <scully-content></scully-content>
-        </div>
-      </div>
+      <app-post-header *ngIf="post" [bgImageUrl]="post.bgImageUrl"></app-post-header>
 
-      <hr />
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <div id="comments"></div>
+      <section class="section">
+        <div class="columns">
+          <div class="column is-8 is-offset-2">
+            <div class="content is-medium">
+              <h2 class="subtitle is-4">{{ post.date }}</h2>
+              <!-- <div class="control"><span class="tag is-info is-uppercase">story</span></div> -->
+
+              <h1 class="title">{{ post.title }}</h1>
+              <p>
+                <scully-content></scully-content>
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <div class="is-divider"></div>
+      <section class="section">
+        <div id="comments"></div>
+      </section>
     </div>
-  </article>
-</div>
+  </div>
+</section>

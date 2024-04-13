@@ -1,13 +1,7 @@
-<header class="intro-header" [ngStyle]="imageStyle">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="post-heading">
-          <h1>{{ title }}</h1>
-          <!-- <h2 class="subheading">Problems look mighty small from 150 miles up</h2> -->
-          <span class="meta">on {{ postDate }}</span>
-        </div>
-      </div>
-    </div>
+<div class="columns">
+  <div class="column is-8 is-offset-2">
+    <figure class="image is-16by9">
+      <img [src]="bgImageUrl" alt="blog image" />
+    </figure>
   </div>
-</header>
+</div>
