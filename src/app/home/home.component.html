@@ -14,15 +14,10 @@
           <div class="columns">
             <div class="column is-8 is-offset-2">
               <div class="content is-medium">
-                <h2 class="subtitle is-4">{{ link.date }}</h2>
                 <a [routerLink]="[link.route]">
-                  <h1 class="title">{{ link.title }}</h1>
+                  <h2 class="title is-2">{{ link.title }}</h2>
                 </a>
-                <!-- <p>
-                  This is a starter template for creating a beautiful, customizable blog with
-                  minimal effort. You’ll only have to change a few settings and you’re ready to go.
-                  As with all Jigsaw sites, configuration settings can be found in config
-                </p> -->
+                <h4 class="subtitle is-4">{{ link.date }}</h4>
               </div>
             </div>
           </div>
