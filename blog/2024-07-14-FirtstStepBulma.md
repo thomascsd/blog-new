@@ -1,6 +1,6 @@
 ---
 title: Bulma的初體驗
-bgImageUrl: assets/images/30/30-0.jpeg
+bgImageUrl: assets/images/30/30-0.jpg
 description: Bulma 確實是一個非常直觀且方便使用的 CSS 框架。它的開發者體驗（DX）優秀，對比 Bootstrap 有著更為簡潔的語法和設計。特別是在排版和元件設定方面，Bulma 可以來試試看
 published: true
 ---
@@ -19,9 +19,9 @@ published: true
 
 下面列出幾個特點，對比 Bootstrap，有這些地方讓我覺得很方便使用。
 
-### Column Layout
+- Column Layout
 
-使用 Column 來排版，看了語法後會讓人眼睛一亮，只需使用`columns`及'columns'就會自動排版。
+使用 Column 來排版，看了語法後會讓人眼睛一亮，只需使用 `columns` 及 `columns` 就會自動排版。
 
 ```html
 <div class="columns">
@@ -51,13 +51,14 @@ published: true
 
 <img class="img-responsive" loading="lazy" src="assets/images/30/30-2.png">
 
-一樣也是有[12 columns system](https://bulma.io/documentation/columns/sizes/#12-columns-system)，我這邊就設定`is-8`，將寬度設寬。
+一樣也是有 [12 columns system](https://bulma.io/documentation/columns/sizes/#12-columns-system)，我這邊就設定 `is-8` ，將寬度設寬。
 
-### Component 的設定
+- Component 的設定
 
-比如[Navbar](https://bulma.io/documentation/components/navbar/)的設定，使用的階層是比較少。
+比如 [Navbar](https://bulma.io/documentation/components/navbar/) 的設定，使用的階層是比較少。
 
 ```html
+<!--Bootstrap-->
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="navbar-nav mr-auto">
     <li class="nav-item" routerLinkActive="active">
@@ -74,6 +75,7 @@ published: true
 ```
 
 ```html
+<!--Bluma-->
 <div id="navbarBasic" class="navbar-menu">
   <div class="navbar-start">
     <a class="navbar-item" [routerLink]="['/member']">Member</a>
@@ -83,9 +85,9 @@ published: true
 </div>
 ```
 
-### is-\*的語法
+- is-\*的語法
 
-這邊也是我覺得開發者體體很好的地方，如同上方的`Column Layout`，設定寬度使用`is-8`、`is-2`。
+這邊也是我覺得開發者體體很好的地方，如同上方的 `Column Layout` ，設定寬度使用 `is-8`、`is-2`。
 
 ```html
 <input class="input is-link" type="text" placeholder="Link input" />
@@ -95,11 +97,11 @@ published: true
 </div>
 ```
 
-另外在`input`有很多這種的設定，如上方的`is-link`、`is-small`、`is-focused`，可以參考[input 章節](https://bulma.io/documentation/form/input/)
+另外在 `input` 有很多這種的設定，如上方的 `is-link`、`is-small`、`is-focused` ，可以參考 [input 章節](https://bulma.io/documentation/form/input/)
 
-##參考內容
+## 參考內容
 
-Bulma 有蠻多的資源可以參考，雖然沒有像 Bootstrap 龐大，我覺得還是有不少的資源。
+Bulma 有蠻多的資源可以參考，雖然沒有像 Bootstrap 這麼龎大，我覺得還是有不少的資源。
 
 <img class="img-responsive" loading="lazy" src="assets/images/30/30-3.png">
 
@@ -111,4 +113,4 @@ Bulma 有蠻多的資源可以參考，雖然沒有像 Bootstrap 龐大，我覺
 
 ## 結論
 
-結論來說，Bulma 確實是一個非常直觀且方便使用的 CSS 框架。它的開發者體驗（DX）優秀，對比 Bootstrap 有著更為簡潔的語法和設計。特別是在排版和元件設定方面，Bulma 可以來試試看。
+結論來說，Bulma 確實是一個非常直觀且方便使用的 CSS 框架。它的開發者體驗（DX）優秀，對比 Bootstrap 有著更為簡潔的語法和設計。特別是在排版和元件設定方面，Bulma 可以來試試看，並且將 Blog 也一起使用 Bulma 翻新。
