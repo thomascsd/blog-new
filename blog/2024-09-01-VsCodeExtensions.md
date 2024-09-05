@@ -7,47 +7,51 @@ published: true
 
 VSCode 擴充套件的社群很活躍，每週都有不同的套件推出，我也用了很多種的套件，所以想介紹一些下戴量不多但是我覺得好用的套件，但一些有名的套件，如 ESLint、GitLens，大家應該都知道，就不包含了。
 
-- [Separators](https://marketplace.visualstudio.com/items?itemName=alefragnani.separators)
+## [Separators](https://marketplace.visualstudio.com/items?itemName=alefragnani.separators)
 
 <img class="img-responsive" loading="lazy" src="assets/images/31/31-01.png">
 
-<img class="img-responsive" loading="lazy" src="assets/images/31/31-02.png">
+<img class="img-responsive" loading="lazy" src="assets/images/31/31-02.png"><br>
 
 這個套件的功能很單純，在`function` 或 `method` 上方出現分隔線，增加可讀性。
 
-- [TabOut](https://marketplace.visualstudio.com/items?itemName=albert.TabOut)
+## [TabOut](https://marketplace.visualstudio.com/items?itemName=albert.TabOut)
 
 <img class="img-responsive" loading="lazy" src="assets/images/31/31-03.png">
 
 <img class="img-responsive" loading="lazy" src="assets/images/31/31-04.gif">
 
-這個功能就是如上圖示，按下`tab`鍵即可跳至下一個區塊，而這個功能是我一直在尋找的，因為在`Visual Studiox`有類似這個功能，增加很大的便利性。
+這個功能就是如上圖示，按下`tab`鍵即可跳至下一個區塊，而這個功能是我一直在尋找的，因為在`Visual Studiox`有類似這個功能，增加很大的便利性。<br>
 
-- [Project Manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager)
+## [Project Manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager)
 
 <img class="img-responsive" loading="lazy" src="assets/images/31/31-05.png">
 
-這個套件的功能是，所設定的根目錄下的將所有專案目錄都顯示出來，方便又快速地切專案間的互相切換。
-
 <img class="img-responsive" loading="lazy" src="assets/images/31/31-06.png">
 
-第一次開啟時，需設定根目錄的相關資訊。
-
-- [Version Lens](https://marketplace.visualstudio.com/items?itemName=pflannery.vscode-versionlens)
+這個套件的功能是，所設定的根目錄下的將所有專案目錄都顯示出來，方便又快速地切專案間的互相切換。
 
 <img class="img-responsive" loading="lazy" src="assets/images/31/31-07.png">
 
-裝好套件後，在`package.json`時，即可按右上方的 V 按鈕
+第一次開啟時，需設定根目錄的相關資訊。<br>
+
+## [Version Lens](https://marketplace.visualstudio.com/items?itemName=pflannery.vscode-versionlens)
 
 <img class="img-responsive" loading="lazy" src="assets/images/31/31-08.png">
+
+<img class="img-responsive" loading="lazy" src="assets/images/31/31-12.png">
+
+裝好套件後，在`package.json`時，即可按右上方的 V 按鈕
+
+<img class="img-responsive" loading="lazy" src="assets/images/31/31-13.png">
 
 等待一下後，即會在套件上方出現版本號的資料
 
 <img class="img-responsive" loading="lazy" src="assets/images/31/31-09.png">
 
-如此可以快速的更新至最新版本。
+如此可以快速的更新至最新版本。<br>
 
--[Readme Pattern](https://marketplace.visualstudio.com/items?itemName=thomascsd.vscode-readme-pattern)
+## [Readme Pattern](https://marketplace.visualstudio.com/items?itemName=thomascsd.vscode-readme-pattern)
 
 <img class="img-responsive" loading="lazy" src="assets/images/31/31-10.png">
 
