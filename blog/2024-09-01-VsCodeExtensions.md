@@ -1,11 +1,11 @@
 ---
-title: 我推薦的VSCode Extensions
-bgImageUrl: assets/images/31/31-0.jpg
+title: VSCode Extensions 其他的選擇
+bgImageUrl: assets/images/31/31-0.jpeg
 description: 這次我要跟大家分享一些我覺得很好用的 VSCode 擴充套件。這些套件可能不太熱門，但我覺得它們非常實用。當然，我們都知道像 ESLint 和 GitLens 這樣的知名套件，
 published: true
 ---
 
-VSCode 擴充套件的社群很活躍，每週都有不同的套件推出，我也用了很多種的套件，所以想介紹一些下戴量不多但是我覺得好用的套件，但一些有名的套件，如 ESLint、GitLens，大家應該都知道，就不包含了。
+這次我要跟大家分享一些我覺得很好用的 VSCode 擴充套件。這些套件可能不太熱門，但我覺得它們非常實用。當然，我們都知道像 ESLint 和 GitLens 這樣的知名套件，所以我不會再提到它們了。請大家參考看看。
 
 ## [Separators](https://marketplace.visualstudio.com/items?itemName=alefragnani.separators)
 
@@ -13,32 +13,30 @@ VSCode 擴充套件的社群很活躍，每週都有不同的套件推出，我�
 
 <img class="img-responsive" loading="lazy" src="assets/images/31/31-02.png"><br>
 
-這個套件的功能很單純，在`function` 或 `method` 上方出現分隔線，增加可讀性。
+這個套件的功能很單純，在`function` 或 `method` 上方出現分隔線，讓程式變成一個一個區塊的。
 
 ## [TabOut](https://marketplace.visualstudio.com/items?itemName=albert.TabOut)
 
 <img class="img-responsive" loading="lazy" src="assets/images/31/31-03.png">
-
+<br>
 <img class="img-responsive" loading="lazy" src="assets/images/31/31-04.gif">
 
-這個功能就是如上圖示，按下`tab`鍵即可跳至下一個區塊，而這個功能是我一直在尋找的，因為在`Visual Studiox`有類似這個功能，增加很大的便利性。<br>
+這個功能就是如上圖示，按下`tab`鍵即可跳至下一個區塊，而這個功能是我一直在尋找的，因為在`Visual Studio`有類似這個功能，增加很大的便利性。<br>
 
 ## [Project Manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager)
 
 <img class="img-responsive" loading="lazy" src="assets/images/31/31-05.png">
-
+<br>
 <img class="img-responsive" loading="lazy" src="assets/images/31/31-06.png">
 
-這個套件的功能是，所設定的根目錄下的將所有專案目錄都顯示出來，方便又快速地切專案間的互相切換。
-
-<img class="img-responsive" loading="lazy" src="assets/images/31/31-07.png">
-
-第一次開啟時，需設定根目錄的相關資訊。<br>
+一般來說，在開發時常常需要切換不同的專案，而這個這個套件預設會將使用 git 做版本控管的專案自動匯入，並且還有加入`favorites`、設定標籤的功能，很實用的套件。<br>
 
 ## [Version Lens](https://marketplace.visualstudio.com/items?itemName=pflannery.vscode-versionlens)
 
 <img class="img-responsive" loading="lazy" src="assets/images/31/31-08.png">
 
+有時候，我們會需要查看安裝的套件是否是最新版，以及希望能夠快速更新，而這個套件就可完成這目的。
+<br>
 <img class="img-responsive" loading="lazy" src="assets/images/31/31-12.png">
 
 裝好套件後，在`package.json`時，即可按右上方的 V 按鈕
@@ -49,15 +47,15 @@ VSCode 擴充套件的社群很活躍，每週都有不同的套件推出，我�
 
 <img class="img-responsive" loading="lazy" src="assets/images/31/31-09.png">
 
-如此可以快速的更新至最新版本。<br>
+如此可以快速的更新至最新版本，最後執行 `npm install`就完成了。<br>
 
 ## [Readme Pattern](https://marketplace.visualstudio.com/items?itemName=thomascsd.vscode-readme-pattern)
 
 <img class="img-responsive" loading="lazy" src="assets/images/31/31-10.png">
-
+<br>
 <img class="img-responsive" loading="lazy" src="assets/images/31/31-11.gif">
 
-毛遂自薦一下，我自已建立的套件，可以快速的新增 ReadMe.md 範本。
+最後推薦一下我自已開發的套件，有時候可以快速的新增 ReadMe.md 範本。
 
 ## 結論
 
