@@ -5,8 +5,12 @@ description: Angular v14 中最重要的 2 個功能，除了 Single Component �
 published: true
 ---
 
+2024-11-10 更新：增加 FormBuild.group 和 class-validator 的程式說明
+
+<hr>
+
 在 Angular v14 中最重要的 2 個功能，除了 Single Component 之外，就是 Typeform 了，而 Typeform 也就是在建立 Form 功能時，終於可以套用型別，方便開發及除錯，是期待很久的功能。
-查詢[官方文件](https://angular.tw/guide/typed-forms)可以發現，範列都是使用從建立 'FormGroup'，再建立 'FormControl' 的方式。
+查詢[官方文件](https://angular.tw/guide/typed-forms)可以發現，範列都是使用從建立 `FormGroup`，再建立 'FormControl' 的方式。
 
 <img class="img-responsive" loading="lazy" src="assets/images/25/25-01.png">
 
@@ -186,11 +190,14 @@ export class Member extends BaseModel {
 import { ValidationErrors, ValidatorFn } from '@angular/forms';
 import { validateSync } from 'class-validator';
 
-export function utilValidator<T extends {}>(model: T, prop: string): ValidatorFn {
+export function utilValidator<T extends Record<string, any>>(
+  model: T,
+  prop: string,
+): ValidatorFn {
   return (control): ValidationErrors | null => {
     let invalid = false;
 
-    model[prop] = control.value;
+    (model as any)[prop] = control.value;
 
     const errors = validateSync(model, {
       skipMissingProperties: true,
@@ -200,10 +207,15 @@ export function utilValidator<T extends {}>(model: T, prop: string): ValidatorFn
       const propError = errors.filter((e) => e.property == prop);
 
       if (propError.length > 0) {
-        const msg = propError.map(({ constraints }) => Object.values(constraints).join(', '));
+        const message = propError.map(({ constraints }) =>
+          Object.values(constraints || {}).join(', '),
+        );
         invalid = true;
 
-        return { hasError: invalid && (control.dirty || control.touched), msg };
+        return {
+          hasError: invalid && (control.dirty || control.touched),
+          message: message,
+        };
       }
     }
 
@@ -212,15 +224,28 @@ export function utilValidator<T extends {}>(model: T, prop: string): ValidatorFn
 }
 ```
 
-為了要將 'class-validator' 和 'FormGroup' 、'FormControl' 整合，本人建立了共同方法，首先使用 `validateSync` 來驗證 model，接著取得特定屬性的錯誤訊息。
+為了要將 `class-validator` 和 `FormGroup` 、`FormControl` 整合，建立了共同方法 `utilValidator`，使用`class-validator`中的方法 `validateSync` 來驗證 model，並且取得特定屬性的錯誤訊息。
 
-```html
-<div class="text-danger" *ngIf="group.controls.name.errors?.hasError">
-  {{ group.controls.name.errors?.msg }}
-</div>
+```javascript
+this.group = this.fb.group({
+  name: new FormControl('', utilValidator(new Member(), 'name')),
+  email: new FormControl('', utilValidator(new Member(), 'email')),
+  mobile: new FormControl('', utilValidator(new Member(), 'mobile')),
+  birthday: new FormControl('', utilValidator(new Member(), 'birthday')),
+  account: new FormControl('', utilValidator(new Member(), 'account')),
+  password: new FormControl('', utilValidator(new Member(), 'password')),
+});
 ```
 
-而如果有錯誤的話，固定回傳格式為 `{ hasError: true, msg }`，所以頁面上只需判斷 `hasError === true`即可。
+接著在 `FormBuilder` 的 `Group` 方法中，使用剛剛建立的 `utilValidator`，傳入 model 及屬性，即可將`class-validator` 及 `FormGroup` 整合在一起。
+
+```html
+@if (group.controls.name.errors?.["hasError"]) {
+<p class="help is-danger">{{ group.controls.name.errors?.["message"] }}</p>
+}
+```
+
+而如果有錯誤的話，固定回傳格式為 `{ hasError: true, message }`，所以頁面上只需判斷 `hasError === true`即可。
 
 <img class="img-responsive" loading="lazy" src="assets/images/25/25-02.png">
 
