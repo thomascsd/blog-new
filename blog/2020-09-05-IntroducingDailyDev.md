@@ -1,43 +1,41 @@
 ---
 title: daily.dev - 整合各個技術文章的好用套件
 bgImageUrl: assets/images/17/17-0.jpg
+description: 最近這幾年都是使用daily.dev 來閱讀文章。這個網站結合了各類文章，不只有網站，還有 Android 及 IOS 的 APP 可以使用，分享給大家參考看看。
 published: true
 ---
 
-這一次不討論技術，我常常早上都會看一些技術文章，大部份是從 [echojs](https://www.echojs.com/) 或者 [Medium](https://medium.com/)，但是發現文章散落在各個網站，就想有沒有服務會整合各個網站的文章，之前在 GitHub 的 treading 發現一個服務－[daily.dev](https://daily.dev/)剛好滿足我的需求，並且也是瀏覽器套件，Chrome 及 FireFox 都可以安裝，會將文章顯示在新分頁中，分享給大家參考看看。
+2025/03/16 重新改寫
 
-## 如何安裝
+我常常早上都會看一些技術文章，最近這幾年都是使用[daily.dev](https://daily.dev/) 來閱讀文章。這個網站結合了各類文章，不只有網站，還有 Android 及 IOS 的 APP 可以使用，分享給大家參考看看。
 
 <img class="img-responsive" loading="lazy" src="assets/images/17/17-01.png">
 
-首先至[daily.dev](https://daily.dev/)下戴瀏覽器的擴充套件，支援 FireFox 及 Chrome。
-
-## 套件的功能
+## 如何使用
 
 <img class="img-responsive" loading="lazy" src="assets/images/17/17-02.png">
 
-開啟新分頁後，就會顯示各個文章，並且第一次戴入時，有詢問是否顯示最近瀏覽的網站。
+如上圖所示，從網站到有 IOS 、 Android 的 APP，以及各個瀏覽器的擴充套件，幾乎可以從各個裝置存取，這次我以網站示範。
 
 <img class="img-responsive" loading="lazy" src="assets/images/17/17-03.png">
 
-首先我們先選擇 Layout Settings，設定 daily.dev 相關的選項。
+首先需要登入，我用 Github 的帳號登入
 
 <img class="img-responsive" loading="lazy" src="assets/images/17/17-04.png">
+
+選擇感興趣的標籤，將根據這些標籤推薦相應的文章。
+
 <img class="img-responsive" loading="lazy" src="assets/images/17/17-05.png">
 
-例如，如上圖可以設定縮圖模式或是清單模式，我個人比較偏好清單模式，介面比較清爽，並且一個畫面上也可看到比較多的文章，另外也可以設定是 Dark mode 或是 Light mode。
+在 `My Feed` 上就可以瀏覽所有推薦的文章。
 
 <img class="img-responsive" loading="lazy" src="assets/images/17/17-06.png">
 
-可以在側邊欄上新增、刪除文章的來源。
+另外，在 `Explore` 中可以找到今天最受歡迎的文章，或是查看那些獲得最多推薦的文章。
 
 <img class="img-responsive" loading="lazy" src="assets/images/17/17-07.png">
 
-並且可以將文章加入書籤的功能。
-
-<img class="img-responsive" loading="lazy" src="assets/images/17/17-08.png">
-
-另外也可用 GitHub 帳號登入，同步書籤及文章的來源。
+還有群組的功能，這邊稱為`Squads`，比例是.NET 的群組中，.NET 相關的文章全部集中在一起。
 
 ## 結論
 
