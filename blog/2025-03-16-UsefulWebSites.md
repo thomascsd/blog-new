@@ -13,7 +13,7 @@ published: true
 
 網站的內容主要是彙整前端技術的文章，任何人都可以註冊後，將有興趣的文章貼上。最近這個網站比較少看了，主要是看接下來的網站。
 
-## daily.dev
+## [daily.dev](https://daily.dev/)
 
 <img class="img-responsive" loading="lazy" src="assets/images/32/32-02.png">
 
