@@ -35,7 +35,7 @@ published: true
 
 <img class="img-responsive" loading="lazy" src="assets/images/17/17-07.png">
 
-還有群組的功能，這邊稱為`Squads`，比例是.NET 的群組中，.NET 相關的文章全部集中在一起。
+還有群組的功能，這邊稱為`Squads`，就像在以 .NET 主題的群組中，.NET 相關的文章全部集中在一起。
 
 ## 結論
 
