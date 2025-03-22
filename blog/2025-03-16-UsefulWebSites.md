@@ -1,6 +1,6 @@
 ---
 title: 開發程式中一些有用的網站
-bgImageUrl: assets/images/32/32-0.jpeg
+bgImageUrl: assets/images/32/32-0.jpg
 description: 我想介紹兩個文章集合網站（Echo.js和Daily.dev）。此外，我還會分享一些我平常收集的工具類型網站
 published: true
 ---
