@@ -1,0 +1,30 @@
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-8 is-offset-2">
+          <figure class="image is-16by9">
+            <img src="assets/images/bgBlog.png" alt="" />
+          </figure>
+        </div>
+      </div>
+
+      <ng-container *ngFor="let link of links$ | async">
+        <section class="section">
+          <div class="columns">
+            <div class="column is-8 is-offset-2">
+              <div class="content is-medium">
+                <a [routerLink]="[link.route]">
+                  <h2 class="title is-2">{{ link.title }}</h2>
+                </a>
+                <h4 class="subtitle is-4">{{ link.date }}</h4>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="is-divider"></div>
+      </ng-container>
+    </div>
+  </div>
+</section>

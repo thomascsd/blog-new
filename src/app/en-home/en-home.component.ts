@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { ScullyRoutesService, ScullyRoute } from '@scullyio/ng-lib';
 import { Observable, zip } from 'rxjs';
@@ -6,14 +6,12 @@ import { map, filter } from 'rxjs/operators';
 import { BlogService } from '../core/blog.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  selector: 'app-en-home',
+  templateUrl: './en-home.component.html',
+  styleUrls: ['./en-home.component.scss'],
 })
-export class HomeComponent implements OnInit {
+export class EnHomeComponent implements OnInit {
   links$: Observable<ScullyRoute[]>;
-  page: number;
-  itemCount = 0;
 
   constructor(
     private scullyService: ScullyRoutesService,
@@ -31,36 +29,15 @@ export class HomeComponent implements OnInit {
   }
 
   private loadData() {
-    const pageSize = 10;
-
     this.links$ = zip(this.scullyService.available$, this.route.queryParams).pipe(
       map(([routes, params]) => {
-        this.page = parseInt(params.page || 1, 10);
-
         let items = routes.filter((route) => !!route.title).reverse();
-        // .slice((this.page - 1) * pageSize, this.page * pageSize);
 
         items.forEach((route) => (route.date = this.blogService.getPostDateFormRoute(route.route)));
-        items = items.filter((route) => route.route.indexOf('en') === -1);
-
-        this.itemCount = items.length;
+        items = items.filter((route) => route.route.indexOf('/en/') !== -1);
 
         return items;
       })
     );
-  }
-
-  previous() {
-    let pageNum = this.page - 1;
-
-    if (pageNum === 0) {
-      pageNum = 1;
-    }
-
-    this.router.navigate(['/'], { queryParams: { page: pageNum }, replaceUrl: true });
-  }
-
-  next() {
-    this.router.navigate(['/'], { queryParams: { page: this.page + 1 }, replaceUrl: true });
   }
 }
