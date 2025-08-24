@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
         // .slice((this.page - 1) * pageSize, this.page * pageSize);
 
         items.forEach((route) => (route.date = this.blogService.getPostDateFormRoute(route.route)));
-        items = items.filter((route) => route.route.indexOf('en') === -1);
+        items = items.filter((route) => route.route.indexOf('/en/') === -1);
 
         this.itemCount = items.length;
 
