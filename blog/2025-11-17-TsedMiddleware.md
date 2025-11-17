@@ -22,9 +22,6 @@ published: true
   children: [
     ImageFileController,
     ForecastController,
-    ContactController,
-    NasaController,
-    AdminController,
     CountyController,
     MemberController,
   ],
