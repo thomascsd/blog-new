@@ -13,6 +13,14 @@ const routes: Routes = [
     path: 'blog',
     loadChildren: () => import('./blog/blog.module').then((m) => m.BlogModule),
   },
+  {
+    path: 'tags',
+    loadChildren: () => import('./tags/tags.module').then((m) => m.TagsModule),
+  },
+  {
+    path: 'en/tags',
+    loadChildren: () => import('./tags/tags.module').then((m) => m.TagsModule),
+  },
 ];
 
 @NgModule({

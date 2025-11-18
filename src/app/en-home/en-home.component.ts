@@ -34,10 +34,24 @@ export class EnHomeComponent implements OnInit {
         let items = routes.filter((route) => !!route.title).reverse();
 
         items.forEach((route) => (route.date = this.blogService.getPostDateFormRoute(route.route)));
-        items = items.filter((route) => route.route.indexOf('/en/') !== -1);
+        items = items.filter((route) => this.blogService.isEnglishRoute(route.route));
 
         return items;
       })
     );
+  }
+
+  /**
+   * 公開格式化標籤名稱的方法供範本使用
+   */
+  formatTagName(tag: string): string {
+    return this.blogService.formatTagName(tag);
+  }
+
+  /**
+   * 公開取得標籤的方法供範本使用
+   */
+  getTagsFromRoute(route: ScullyRoute): string[] {
+    return this.blogService.getTagsFromRoute(route);
   }
 }

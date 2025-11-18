@@ -3,6 +3,7 @@ title: Angular Detects if DOM Render is Complete
 bgImageUrl: assets/images/28/28-0.jpg
 description: Use the two lifecycles of `ngOnChanges` and `ngAfterViewChecked` to determine whether the DOM Render is complete
 published: true
+tags: [angular, lifecycle]
 ---
 
 Recently, I encountered a requirement to determine whether the scroll bar of the page has reached the bottom, but a different point is that the content will be dynamically loaded after the Dialog is opened, and then it will be judged whether the scroll bar has reached the bottom, that is, it is necessary to determine whether the DOM has been loaded. But I encountered a difficult problem. Angular does not have a `$trick` method like Vue.js, which can know that the Dom render has been completed. When I checked StackOverFlow, it was recommended to use `ngAfterViewChecked`, but after testing, I feel that it is better to use `ngOnChanges` and `ngAfterViewChecked` at the same time. Let me share my approach.

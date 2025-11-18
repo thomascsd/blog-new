@@ -2,6 +2,7 @@
 title: SVG與Angular
 bgImageUrl: assets/images/13/13-0.jpg
 published: true
+tags: [svg, angular]
 ---
 
 處理 SVG 已經是前端常常會遇到的事情，現在很多頁面上的圖片都是用 SVG 來取代，而 SVG 的優點這裡就不多述說。這邊提供我處理 SVG 的一些心得。

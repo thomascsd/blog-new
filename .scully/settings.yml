@@ -5,7 +5,7 @@ staticPort: 1668
 reloadPort: 2667
 hostName: localhost
 projectName: blog-new
-homeFolder: D:\projects\blog-new
+homeFolder: D:\blog-new
 distFolder: dist/blog-new
-outDir: D:\projects\blog-new\dist\static
+outDir: D:\blog-new\dist\static
 handle404: ''

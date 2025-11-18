@@ -3,6 +3,7 @@ title: First experience with Bulma
 bgImageUrl: assets/images/30/30-0.jpg
 description: Bulma is indeed a very intuitive and easy-to-use CSS framework. Its developer experience (DX) is excellent, and it has a more concise syntax and design than Bootstrap. Especially in terms of layout and component settings, Bulma is worth a try.
 published: true
+tags: [bulma, css, framework]
 ---
 
 Recently, I became interested in a CSS framework - [Bulma](https://bulma.io/), and found that its developer experience (DX) is excellent and more intuitive to use than Bootstrap. Not long ago, it launched version 1.0, so I would like to write a review to introduce it briefly.

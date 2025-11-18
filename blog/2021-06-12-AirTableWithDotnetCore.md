@@ -3,6 +3,7 @@ title: 將AirTable做為資料庫的心得 - .NET Core 篇
 bgImageUrl: assets/images/20/20-0.jpg
 description: 尋找了一些解決方案，發現AirTable符合我的需求
 published: true
+tags: [airtable, csharp, dotnet]
 ---
 
 我在上一篇的文章[將 AirTable 做為資料庫的心得](https://thomascsd.github.io/blog/2021-04-24-AirtableAsDatabase)，有寫到：我為什麼使用 [AirTable](https://airtable.com/) 當作資料庫，以及優、缺點，並且環境是 Node.js ，語言是 TypeScript ，而這次想要使用 .NET Core 、 C# 來改寫。

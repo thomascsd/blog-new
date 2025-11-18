@@ -2,6 +2,7 @@
 title: Netlify functions 初體驗記錄
 bgImageUrl: assets/images/22/22-0.jpg
 published: true
+tags: [netlify, serverless, javascript]
 ---
 
 一直以來斷斷續續接獨 Servless funcion 的服務，從 FireBase 到 Azure 都有，但是一些原因，而覺得沒有符合我的需求，直到前一陣子，我嘗試使用 [Netlify functions](https://www.netlify.com/products/functions/) ，發現簡單易用，並且也整合 CI/CD ，如果想整合至舊有專案也是挻方便的，就想寫篇文章做個記錄。

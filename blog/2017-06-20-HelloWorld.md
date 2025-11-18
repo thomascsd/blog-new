@@ -1,6 +1,7 @@
 ---
 title: Hello World!
 published: true
+tags: [blog, jekyll]
 ---
 
 第一篇文章，談談為什麼想寫 Blog，有兩個原因：

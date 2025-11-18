@@ -3,6 +3,7 @@ title: Some useful websites in programming
 bgImageUrl: assets/images/32/32-0.jpg
 description: I want to introduce two article collection websites (Echo.js and Daily.dev). In addition, I will also share some tool-type websites that I usually collect
 published: true
+tags: [website, resource, tool]
 ---
 
 With the rapid development of IT technology, various new concepts and programming frameworks emerge in an endless stream, and are updated every year. Therefore, I think reading more articles is a very effective way. Next, I want to introduce two article collection websites (Echo.js and Daily.dev). In addition, I will also share some tool-type websites that I usually collect.

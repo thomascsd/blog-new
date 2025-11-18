@@ -2,6 +2,7 @@
 title: 從範例講解Promise概念
 bgImageUrl: assets/images/06/06-0.jpg
 published: true
+tags: [javascript, promise]
 ---
 
 一般而言，呼叫多個 ajax，最簡單的方式是用 callback 函式，如以下的範例

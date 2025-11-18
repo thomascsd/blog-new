@@ -1,6 +1,7 @@
 ---
 title: 在asp.net MVC上使用vue.js需注意的事項
 published: true
+tags: [vuejs, asp-net, mvc]
 ---
 
 最近開始使用 vue.js 在公司的專案上，並且專案是用 asp.net mvc 來開發的，所以發現在.cshtml 上無法使用 vue.js 的需要注意的小地方。

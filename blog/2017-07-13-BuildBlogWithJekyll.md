@@ -1,6 +1,7 @@
 ---
 title: 使用Jekyll建立Blog -1
 published: true
+tags: [blog, jekyll]
 ---
 
 建立 Blog 的工具有很多，但是可以一鍵馬上完成架站及能夠完全客制化的工具就不多了，其中一個就是[Jekyll](https://jekyllrb.com)。

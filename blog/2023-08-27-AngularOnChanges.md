@@ -3,6 +3,7 @@ title: Angular判斷 DOM Render 是否完成
 bgImageUrl: assets/images/28/28-0.jpg
 description: 使用 `ngOnChanges` 及`ngAfterViewChecked`這 2 個生命週期來判斷 DOM Render 是否完成
 published: true
+tags: [angular, lifecycle]
 ---
 
 最近有遇到一個需求，是判斷頁面的捲軸是否到底，但有個不一様的點是會開啟 Dialog 後，才動態戴入內容再判斷捲軸是否到底，也就是需要判斷 DOM 是否 戴入完成，但碰到難題，Angular 並沒有像是 Vue.js 般有` $trick`方法，可以得知 Dom render 已完成。當查看 StackOverFlow 都是建議使用 `ngAfterViewChecked`，但經過測試後，覺得同時使用 `ngOnChanges` 及`ngAfterViewChecked`後會比較好，分享一下我的做法。

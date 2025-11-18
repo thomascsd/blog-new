@@ -1,0 +1,38 @@
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-8 is-offset-2">
+          <h1 class="title is-2">Articles tagged with "{{ displayName }}"</h1>
+        </div>
+      </div>
+
+      <ng-container *ngFor="let article of articles$ | async">
+        <section class="section">
+          <div class="columns">
+            <div class="column is-8 is-offset-2">
+              <div class="content is-medium">
+                <a [routerLink]="[article.route]">
+                  <h2 class="title is-2">{{ article.title }}</h2>
+                </a>
+                <h4 class="subtitle is-4">{{ article.date }}</h4>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="is-divider"></div>
+      </ng-container>
+
+      <section class="section">
+        <div class="columns">
+          <div class="column is-8 is-offset-2">
+            <p>
+              <a routerLink="/tags">← Back to Tags</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

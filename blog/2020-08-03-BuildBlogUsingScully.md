@@ -2,6 +2,7 @@
 title: 使用 Angular Static Generator - Scully 建立Blog的心得記錄
 bgImageUrl: assets/images/15/15-0.jpg
 published: true
+tags: [scully, angular, static-site, blog]
 ---
 
 2022/09/09 更新：程式碼著色，改為 `prismjs`

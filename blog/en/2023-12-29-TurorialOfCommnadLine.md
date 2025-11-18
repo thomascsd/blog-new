@@ -3,6 +3,7 @@ title: .NET Useful Package - commandline
 bgImageUrl: assets/images/29/29-0.jpeg
 description: A useful package commandline, which parses CLI parameters and uses Attributes to set options
 published: true
+tags: [csharp, dotnet, command-line, tool]
 ---
 
 In the .NET Framework, there was no built-in CLI command parameter parsing. In .NET Core, although there is a package [System.CommandLine](https://www.nuget.org/packages/System.CommandLine), I don't think it is very easy to use. I have found a package [commandline](https://github.com/commandlineparser/commandline) before. The setting and reading reference are very simple and easy to use. I will write a review to share with you.

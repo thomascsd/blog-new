@@ -64,4 +64,18 @@ export class HomeComponent implements OnInit {
   next() {
     this.router.navigate(['/'], { queryParams: { page: this.page + 1 }, replaceUrl: true });
   }
+
+  /**
+   * 公開格式化標籤名稱的方法供範本使用
+   */
+  formatTagName(tag: string): string {
+    return this.blogService.formatTagName(tag);
+  }
+
+  /**
+   * 公開取得標籤的方法供範本使用
+   */
+  getTagsFromRoute(route: ScullyRoute): string[] {
+    return this.blogService.getTagsFromRoute(route);
+  }
 }

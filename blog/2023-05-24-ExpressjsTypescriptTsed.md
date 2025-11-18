@@ -3,6 +3,7 @@ title: 使用TypeScript建立Express.js-使用Ts.ED
 bgImageUrl: assets/images/27/27-0.jpg
 description: Ts.ED 是一個強大且易於使用的 framework，可以將 TypeScipt 與 Express.js整合，並使用 Controller 的方式建立 Express.js
 published: true
+tags: [nodejs, express, typescript, tsed]
 ---
 
 之前有寫過一篇文章[使用 TypeScript 建立 Express.js](https://thomascsd.github.io/blog/2021-02-07-ExpressjssWithTypescript)，介紹了 [routing-controllers](https://github.com/typestack/routing-controllers)，可以將 `TypeScipt` 與 `Express.js`整合，並使用 Controller 的方式建立 `Express.js`，然而發現套件更新有點緩慢，最近在該專案的[GitHub issue](https://github.com/typestack/routing-controllers/issues/900)中有人詢問是否已經停止維護，並在此 isssue 中發現了另一個相似的套件[Ts.ED](https://tsed.io/)。在研究和測試後，覺得可以將程式轉換到 Ts.ED，寫篇心得文分享。

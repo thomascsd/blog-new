@@ -3,6 +3,7 @@ title: Other choices for VSCode Extensions
 bgImageUrl: assets/images/31/31-0.jpeg
 description: This time I want to share with you some VSCode extension packages that I think are very useful. These packages may not be very popular, but I think they are very practical. Of course, we all know well-known packages like ESLint and GitLens,
 published: true
+tags: [vscode, extension, tool]
 ---
 
 This time I want to share with you some VSCode extension packages that I think are very useful. These packages may not be very popular, but I think they are very practical. Of course, we all know well-known packages like ESLint and GitLens, so I won't mention them again. Please refer to them.

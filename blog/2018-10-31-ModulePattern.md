@@ -2,6 +2,7 @@
 title: 談談JavaScript Module part1
 bgImageUrl: assets/images/08/08-0.jpg
 published: true
+tags: [javascript, pattern, module]
 ---
 
 這次想談談模組(Module)，是 JavaScript 的設計模式的其中的一個，一般而言，我們都會希望程式有架構，被重覆使用，這時可以將程式分成一個個的模組，會用兩篇文章討論這個主題，這一篇是講述 Module pattern，下一篇會講述 ES2015 module。

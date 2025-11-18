@@ -3,6 +3,7 @@ title: .NET 好用套件 - commandline
 bgImageUrl: assets/images/29/29-0.jpeg
 description: 好用的套件 commandline，解析 CLI 參數，並使用Attribute來設定options
 published: true
+tags: [csharp, dotnet, command-line, tool]
 ---
 
 在.NET Framework 的時候，沒有內建的 CLI 指令參數解析，再到.NET Core 時，雖然有個套件[System.CommandLine](https://www.nuget.org/packages/System.CommandLine)，但覺得沒有很好使用，之前有發現一個套件 [commandline](https://github.com/commandlineparser/commandline)，設定及讀取參考很簡單易用，寫篇心得文分享一下。

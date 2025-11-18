@@ -1,6 +1,7 @@
 ---
 title: draxt.js-簡化存取檔案的小幫手
 published: true
+tags: [javascript, nodejs, tool]
 ---
 
 Node.js 處理檔案我個人覺得不是很方便，有時候會覺得卡卡的。之前有發現 Node.js 套件[draxt.js](https://github.com/ramhejazi/draxt)，它封裝了[glob](https://github.com/isaacs/node-glob)和[fs-extra](https://github.com/jprichardson/node-fs-extra)這兩個套件，並提供類似 jQuery 的語法，讓檔案的處理變簡單了。

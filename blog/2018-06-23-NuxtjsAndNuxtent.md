@@ -2,6 +2,7 @@
 title: 使用Nuxt.js及Nuxtent建立Blog的心得
 bgImageUrl: assets/images/05/05-0.jpg
 published: true
+tags: [nuxtjs, vuejs, blog]
 ---
 
 Nuxt.js 是內建 SSR 的 vue.js 框架，我最感興趣的部份是可輸出靜態的 Html，如此就可以輕鬆的將程式部署至 GitHub Page 上，並且可以使用 module 來擴充功能。

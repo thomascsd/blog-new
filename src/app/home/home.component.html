@@ -18,6 +18,17 @@
                   <h2 class="title is-2">{{ link.title }}</h2>
                 </a>
                 <h4 class="subtitle is-4">{{ link.date }}</h4>
+
+                <!-- Tags section -->
+                <div class="tags" *ngIf="getTagsFromRoute(link).length > 0">
+                  <a
+                    *ngFor="let tag of getTagsFromRoute(link)"
+                    [routerLink]="['/tags', tag]"
+                    class="tag is-light"
+                  >
+                    {{ formatTagName(tag) }}
+                  </a>
+                </div>
               </div>
             </div>
           </div>

@@ -2,6 +2,7 @@
 title: 於Angular中，建立Library的心得
 bgImageUrl: assets/images/10/10-0.jpg
 published: true
+tags: [angular, library]
 ---
 
 在 Angular CLI 6.0 以上就可以直接建立 Library，而 Library 的用途可以將自已建立的元件發佈至 NPM，或是專案一些共同的元件拆分出去。

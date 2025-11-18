@@ -1,0 +1,38 @@
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-8 is-offset-2">
+          <h1 class="title is-2">All Tags</h1>
+          <p class="subtitle">Click on a tag to see all articles with that tag.</p>
+        </div>
+      </div>
+
+      <section class="section">
+        <div class="columns">
+          <div class="column is-8 is-offset-2">
+            <div class="tags">
+              <ng-container *ngFor="let tagInfo of tags$ | async">
+                <a [routerLink]="['/tags', tagInfo.tag]" class="tag is-medium is-info is-light">
+                  <span>{{ formatTagName(tagInfo.tag) }}</span>
+                  <span class="tag is-info">{{ tagInfo.count }}</span>
+                </a>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="is-divider"></div>
+      <section class="section">
+        <div class="columns">
+          <div class="column is-8 is-offset-2">
+            <p>
+              <a routerLink="/">← Back to Home</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

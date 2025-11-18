@@ -2,6 +2,7 @@
 title: Uppy - 最方便的上傳套件
 bgImageUrl: assets/images/11/11-0.jpg
 published: true
+tags: [uppy, file-upload, javascript]
 ---
 
 一直以來，我都覺得上傳檔案的程式開發，是表單處理中的痛點，一般的&lt;input type="file" />的功能比較簡略，介面不甚美觀。之前有發現 Uppy 這個套件，就對它感興趣，現在已經出了 1.0 版，想寫篇文章記錄一下心得。

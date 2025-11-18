@@ -2,6 +2,7 @@
 title: VSCode Extension的開發心得
 bgImageUrl: assets/images/12/12-0.jpg
 published: true
+tags: [vscode, extension, javascript]
 ---
 
 [2020/08/29 更新：加上 package.json 的設定]

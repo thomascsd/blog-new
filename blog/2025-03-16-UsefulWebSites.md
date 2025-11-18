@@ -3,6 +3,7 @@ title: 開發程式中一些有用的網站
 bgImageUrl: assets/images/32/32-0.jpg
 description: 我想介紹兩個文章集合網站（Echo.js和Daily.dev）。此外，我還會分享一些我平常收集的工具類型網站
 published: true
+tags: [website, resource, tool]
 ---
 
 隨著 IT 技術的快速發展，各種新的觀念和程式框架層出不窮，每年都有所更新。因此，我認為多閱讀一些文章是一個非常有效的方式。接下來，我想介紹兩個文章集合網站（Echo.js 和 Daily.dev）。此外，我還會分享一些我平常收集的工具類型網站。
